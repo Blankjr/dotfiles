@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# query=$(printf '%s' "$*" | tr ' ' '+')
+# "$(curl -s "https://vid.puffyan.us/search?q=$query" | grep -Eo "watch\?v=.{11}" | head -n 1)"
+
+#ls | grep -E '.mkv|mp4' | fzf | xargs -I {} mpv {}
+#fzf '.mkv|mp4' | xargs -I {} mpv {}
+#ls -R | grep -E '.mkv|mp4' | fzf | xargs -I {} mpv {}
+
+#-----------Only list files in this folder-----------------------------------------------
+#ls | grep -E '.mkv|mp4|opus|mp3' | fzf | sed -e "s/'/'\\\\''/g; 1s/^/'/; \$s/\$/'/" | xargs -I {} mpv --really-quiet '{}'
+#------------ Recursive----------------------------------------------------------------
+fd . "$(pwd)" | grep -E '.mkv|mp4|avi' | fzf | sed -e "s/'/'\\\\''/g; 1s/^/'/; \$s/\$/'/" | xargs -I {} mpv --really-quiet --fs '{}'

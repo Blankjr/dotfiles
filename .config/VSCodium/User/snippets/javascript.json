@@ -1,0 +1,184 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"GetById": {
+		"prefix": "getbyid",
+		"body": [
+			"document.getElementById('${2:id}');"
+		],
+		"description": "getElementById"
+	},
+	"GetById2": {
+		"prefix": "id",
+		"body": [
+			"document.getElementById('${2:id}');"
+		],
+		"description": "getElementById"
+	},
+	"getElementsByClassName": {
+		"prefix": "getbyclass",
+		"body": [
+			"${1:document}.getElementsByClassName('${2:class}');"
+		],
+		"description": "getElementsByClassName"
+	},
+	"getElementsByTagName": {
+		"prefix": "getbytag",
+		"body": [
+			"${1:document}.getElementsByTagName('${2:tag}');"
+		],
+		"description": "getElementsByTagName"
+	},
+	"getAttribute": {
+		"prefix": "getattr",
+		"body": [
+			"${1:document}.getAttribute('${2:attr}');"
+		],
+		"description": "getAttribute"
+	},
+	"setAttribute": {
+		"prefix": "setattr",
+		"body": [
+			"${1:document}.setAttribute('${2:attr}', ${3:value});"
+		],
+		"description": "setAttribute"
+	},
+	"removeAttribute": {
+		"prefix": "removeattr",
+		"body": [
+			"${1:document}.removeAttribute('${2:attr}');"
+		],
+		"description": "removeAttribute"
+	},
+	"innerHTML": {
+		"prefix": "innerHTML",
+		"body": [
+			"${1:document}.innerHTML = '${2:elem}';"
+		]
+	},
+	"textContent": {
+		"prefix": "textcontent",
+		"body": [
+			"${1:document}.textContent = '${2:content}';"
+		],
+		"description": "textContent"
+	},
+	"querySelector": {
+		"prefix": "querysel",
+		"body": [
+			"${1:document}.querySelector('${2:selector}');"
+		],
+		"description": "querySelector"
+	},
+	"querySelectorAll": {
+		"prefix": "queryselall",
+		"body": [
+			"${1:document}.querySelectorAll('${2:selector}');"
+		],
+		"description": "querySelectorAll"
+	},
+	"JSON Parse": {
+		"prefix": "jsonparse",
+		"body": [
+			"JSON.parse(${1:obj});"
+		],
+		"description": "JSON Parse"
+	},
+	"JSON Stringify": {
+		"prefix": "jsonstr",
+		"body": [
+			"JSON.stringify(${1:obj});"
+		],
+		"description": "JSON Stringify"
+	},
+	"create Element": {
+		"prefix": "createelement",
+		"body": [
+			"${1:document}.createElement(${2:elem});"
+		],
+		"description": "Create Element"
+	},
+	"createDocumentFragment": {
+		"prefix": "fragment",
+		"body": [
+			"${1:document}.createDocumentFragment();"
+		],
+		"description": "createDocumentFragment"
+	},
+	"add Event Listener": {
+		"prefix": "eventlistener",
+		"body": [
+			"${1:document}.addEventListener('${2:load}', function(e) {",
+			"    ${3:// body}",
+			"});"
+		],
+		"description": "add Event Listener"
+	},
+	"appendChild": {
+		"prefix": "appendchild",
+		"body": [
+			"${1:document}.appendChild(${2:elem});"
+		],
+		"description": "appendChild"
+	},
+	"removeChild": {
+		"prefix": "removechild",
+		"body": [
+			"${1:document}.removeChild(${2:elem});"
+		],
+		"description": "removeChild"
+	},
+	"classList add": {
+		"prefix": "classadd",
+		"body": [
+			"${1:document}.classList.add('${2:class}');"
+		],
+		"description": "classList add"
+	},
+	"classList toggle": {
+		"prefix": "classtoggle",
+		"body": [
+			"${1:document}.classList.toggle('${2:class}');"
+		],
+		"description": "classList toggle"
+	},
+	"classList remove": {
+		"prefix": "classremove",
+		"body": [
+			"${1:document}.classList.remove('${2:class}');"
+		],
+		"description": "classList remove"
+	},
+	"console dir": {
+		"prefix": "dir",
+		"body": [
+			"console.dir(${1});"
+		],
+		"description": "console dir"
+	},
+	"console info": {
+		"prefix": "info",
+		"body": [
+			"console.info(${1});"
+		],
+		"description": "console info"
+	},
+	"console log": {
+		"prefix": "l",
+		"body": [
+			"console.log(${1});"
+		],
+		"description": "console log"
+	}
+}

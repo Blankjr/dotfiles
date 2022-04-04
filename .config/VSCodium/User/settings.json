@@ -1,0 +1,73 @@
+{
+    "workbench.iconTheme": "eq-material-theme-icons",
+    "editor.fontSize": 16,
+    "editor.formatOnPaste": true,
+    "javascript.validate.enable": false,
+    "window.zoomLevel": 2,
+    "editor.wordWrap": "on",
+    "html.format.wrapLineLength": 0,
+    "cSpell.language": ",de,en,en-GB",
+    "workbench.iconTheme": "material-icon-theme",
+    "git.autofetch": true,
+    "cSpell.allowCompoundWords": true,
+    "git.confirmSync": false,
+    "editor.fontFamily": "Operator Mono Medium",
+    "editor.formatOnSave": true,
+    //vertical line
+    "editor.rulers": [
+        100
+    ],
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}",
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true
+        //,
+        //"**/*.code-search": true
+    },
+    "workbench.activityBar.visible": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css"
+        }
+    ],
+    "liveServer.settings.CustomBrowser": "firefox",
+    "editor.linkedEditing": true,
+    "workbench.productIconTheme": "el-vsc-v1-icons",
+    "code-runner.runInTerminal": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.tabSizing": "shrink",
+    "discord.lowerDetailsNoWorkspaceFound": "Hello there :)",
+    "discord.lowerDetailsIdling": "Hello there :)",
+    "discord.lowerDetailsDebugging": "Hello there :)",
+    "discord.lowerDetailsEditing": "Hello there :)",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "thunder-client.codeSnippetLanguage": "js-fetch",
+    "editor.formatOnType": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.tabWidth": 4,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.fontSize": 12,
+    "workbench.startupEditor": "none",
+    "terminal.integrated.fontFamily": "mononoki Nerd Font Mono Regular",
+    "workbench.colorTheme": "Make Apps Theme",
+    "jupyter.generateSVGPlots": true
+}

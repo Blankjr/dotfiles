@@ -1,0 +1,8 @@
+#!/bin/sh
+cd ~/Music || exit
+cd ~/Music/"$(ls -d */ | fzf)" || exit
+#cd "$(ls -d * | fzf)" || exit
+ls -d * | fzf | xargs -I {} mpv --really-quiet "{}"
+#mpv --really-quiet .
+
+# mpv --really-quiet .

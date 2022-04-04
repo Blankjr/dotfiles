@@ -1,0 +1,33 @@
+#!/bin/sh
+
+#ARGS="--volume=60"
+
+notification(){
+	notify-send "Now playing:" "Lofi Radio ☕️🎶"
+}
+
+menu(){
+	printf "1. Lofi Girl\n"
+	printf "2. Chillhop\n"
+	printf "3. Box Lofi\n"
+	printf "4. The Bootleg Boy\n"
+	printf "5. Radio Spinner\n"
+	printf "6. SmoothChill\n"
+}
+
+main() {
+	menu
+	read -r choice
+	case $choice in
+		1)source="https://play.streamafrica.net/lofiradio";;
+		2)source="http://stream.zeno.fm/fyn8eh3h5f8uv";;
+		3)source="http://stream.zeno.fm/f3wvbbqmdg8uv";;
+		4)source="http://stream.zeno.fm/0r0xa792kwzuv";;
+		5)source="https://live.radiospinner.com/lofi-hip-hop-64";;
+		6)source="https://media-ssl.musicradio.com/SmoothChill";;
+	esac
+}
+
+pkill -f mpv
+main
+mpv $source

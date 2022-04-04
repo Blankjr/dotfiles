@@ -1,0 +1,3 @@
+#!/bin/sh
+
+fzf </home/christian/.local/bin/data/streamer.txt | xargs -I {} mpv --really-quiet "https://www.twitch.tv/{}"

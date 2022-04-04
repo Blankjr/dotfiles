@@ -1,0 +1,3 @@
+#!/bin/bash
+printf "Remember to drink water 웃ツ\n"
+curl wttr.in/"$1"

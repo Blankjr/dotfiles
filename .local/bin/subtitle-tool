@@ -1,0 +1,19 @@
+#!/bin/sh
+
+cd ~/Downloads/
+#mv ./subtitles/*.srt ./subtitles/old
+#zips=ls *\(english|german\)*.zip
+regex='*(english|german)*.zip'
+zips=$re 
+#zips=$(ls *(english|german)*.zip)
+
+for y in $zips; do echo $y; done
+#echo zips
+#for z in *(english|german)*.zip; do echo "test"; done
+#for z in *german*.zip; do unzip  $z; done
+
+#mv *.srt subtitles
+# if unzip generated folder including the srt file
+#mv ^subtitles/*.srt subtitles
+# delete empty srt folders
+# rmdir --ignore-fail-on-non-empty  *

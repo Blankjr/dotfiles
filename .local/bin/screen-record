@@ -1,0 +1,45 @@
+#!/bin/sh
+
+__help="
+Usage: $(basename $0) [OPTIONS]
+
+Options:
+    -m       Start recording main screen
+    -s       Start recording second screen
+    --help   Print this message
+Configure:
+    use: xrandr --current
+    replace resolution and screen start position with output of xrandr inside the script
+    Example: 3440x1440+1920+0 => -video_size 3440x1440  -i :0.0+1920,0 
+"
+video_destination="$HOME/Videos/screenrecord"
+
+while [ -n "$1" ]; do # while loop starts
+
+    case "$1" in
+
+    --help)
+        echo "$__help"
+        ;; # Print help message
+
+    -m)
+        echo "recording main screen, press Q to stop recording"
+        cd "$video_destination" || exit
+        ffmpeg -video_size 3440x1440 -framerate 30 -f x11grab -i :0.0+1920,0 "main-screen-capture_$(date +"%d-%m-%Y_%H:%M:%S").mkv"
+        echo "File saved to $video_destination"
+        ;; # execute main screen recording with ffmpeg
+
+    -s)
+        echo "recording second screen, press Q to stop recording"
+        cd "$video_destination" || exit
+        ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0+0,456 "second-screen-capture_$(date +"%d-%m-%Y_%H:%M:%S").mkv"
+        echo "File saved to $video_destination"
+        ;; # execute second screen recording with ffmpeg
+
+    *) echo "Option $1 not recognized, use --help for guidance" ;;
+
+    esac
+
+    shift
+
+done
