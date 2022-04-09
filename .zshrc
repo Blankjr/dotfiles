@@ -7,10 +7,15 @@ alias pyenv='python3 -m venv ./venv; source ./venv/bin/activate'
 #alias fzf-open='fzf | xargs -I {} xdg-open {}'
 alias fzf-open=' (fzf --height 40% --reverse </dev/tty) | xargs -I {} xdg-open {}'
 alias yts='ytfzf -t'
-#alias yts -f='ytfzf'
 notflixpath='/home/christian/dev/python/web-scraping/media/'
 alias notflix='${notflixpath}venv/bin/python3.10 ${notflixpath}notflix.py'
-
+#alias gitupdate='(for l in `find . -name .git | xargs -i dirname {}` ; do cd $l; pwd; git pull; cd -; done)'
+alias ls='br -dp'
+alias lsa='br -dph'
+alias rm='rm -I --preserve-root'
+alias vim='nvim'
+alias v='nvim'
+alias z='zathura'
 #---------------------------------------------- chpwd pyvenv ---
 python_venv() {
   MYVENV=./venv
@@ -34,3 +39,5 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
 fi
 
 
+
+source /home/christian/.config/broot/launcher/bash/br
