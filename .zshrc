@@ -16,6 +16,12 @@ alias rm='rm -I --preserve-root'
 alias vim='nvim'
 alias v='nvim'
 alias z='zathura'
+alias speedread='tspreed'
+#----Git--------------------------------------------------------
+alias amend='commit --amend -m'
+alias commit='commit -m'
+alias rndwall='styli.sh -k -s anime'
+alias clock='tty-clock'
 #---------------------------------------------- chpwd pyvenv ---
 python_venv() {
   MYVENV=./venv
@@ -41,3 +47,4 @@ fi
 
 
 source /home/christian/.config/broot/launcher/bash/br
+
