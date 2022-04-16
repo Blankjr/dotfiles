@@ -21,10 +21,14 @@ DisplayPort-2 DisplayPort-1 Width 1920x1080=434
 DisplayPort-2 DisplayPort-1 Width 3440x1440=537
 
 [MainWindow]
-DisplayPort-1 DisplayPort-2 Height 3440x1440=617
-DisplayPort-1 DisplayPort-2 Width 3440x1440=760
-DisplayPort-1 DisplayPort-2 XPosition 3440x1440=2085
-DisplayPort-1 DisplayPort-2 YPosition 3440x1440=260
+DisplayPort-1 DisplayPort-2 Height 1920x1080=1030
+DisplayPort-1 DisplayPort-2 Height 3440x1440=682
+DisplayPort-1 DisplayPort-2 Width 1920x1080=1918
+DisplayPort-1 DisplayPort-2 Width 3440x1440=3438
+DisplayPort-1 DisplayPort-2 XPosition 1920x1080=1
+DisplayPort-1 DisplayPort-2 XPosition 3440x1440=1920
+DisplayPort-1 DisplayPort-2 YPosition 1920x1080=49
+DisplayPort-1 DisplayPort-2 YPosition 3440x1440=24
 DisplayPort-1 Height 1920x1080=843
 DisplayPort-1 Width 1920x1080=1912
 DisplayPort-1 Window-Maximized 1920x1080=true
