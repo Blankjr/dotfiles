@@ -25,17 +25,14 @@ KILL=(
 )
 
 # First kill lingering apps
-for app in "${APPS[@]}"
-do
+for app in "${APPS[@]}"; do
     kill -9 $(pidof $app)
 done
-for app in "${KILL[@]}"
-do
+for app in "${KILL[@]}"; do
     kill -9 $(pidof $app)
 done
 
 # Start new instances
-for app in "${APPS[@]}"
-do
+for app in "${APPS[@]}"; do
     env $app ${@:2} &
 done

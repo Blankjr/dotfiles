@@ -4,7 +4,8 @@ local filesystem = require('gears.filesystem')
 -- List of apps to start once on start-up
 return {
   run_on_start_up = {
-
+    'flameshot',
+    --'$HOME/.dotfiles/.config/awesome/configuration/setbackground.sh',
     -- 'picom --config ' .. filesystem.get_configuration_dir() .. 'configuration/picom.conf',
     -- 'nm-applet --indicator', -- wifi
     --'blueberry-tray', -- Bluetooth tray icon
