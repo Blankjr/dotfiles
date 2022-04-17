@@ -2,19 +2,18 @@
 --  "Zenburn" awesome theme  --
 --    By Adrian C. (anrxc)   --
 -------------------------------
+local gears = require("gears")
 
 local themes_path = require("gears.filesystem").get_themes_dir()
 local dpi = require("beautiful.xresources").apply_dpi
 
 -- {{{ Main
 local theme = {}
--- theme.wallpaper = themes_path .. "zenburn/zenburn-background.png"
-theme.wallpaper = themes_path .. "zenburn/wall_0307.jpg"
+theme.wallpaper = themes_path .. "zenburn/zenburn-background.png"
 -- }}}
 
 -- {{{ Styles
 theme.font      = "sans 8"
-
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
 theme.fg_focus   = "#F0DFAF"
@@ -83,26 +82,6 @@ theme.taglist_squares_unsel = themes_path .. "zenburn/taglist/squarez.png"
 theme.awesome_icon           = themes_path .. "zenburn/awesome-icon.png"
 theme.menu_submenu_icon      = themes_path .. "default/submenu.png"
 -- }}}
-
--- {{{ Layout
-theme.layout_tile       = themes_path .. "zenburn/layouts/tile.png"
-theme.layout_tileleft   = themes_path .. "zenburn/layouts/tileleft.png"
-theme.layout_tilebottom = themes_path .. "zenburn/layouts/tilebottom.png"
-theme.layout_tiletop    = themes_path .. "zenburn/layouts/tiletop.png"
-theme.layout_fairv      = themes_path .. "zenburn/layouts/fairv.png"
-theme.layout_fairh      = themes_path .. "zenburn/layouts/fairh.png"
-theme.layout_spiral     = themes_path .. "zenburn/layouts/spiral.png"
-theme.layout_dwindle    = themes_path .. "zenburn/layouts/dwindle.png"
-theme.layout_max        = themes_path .. "zenburn/layouts/max.png"
-theme.layout_fullscreen = themes_path .. "zenburn/layouts/fullscreen.png"
-theme.layout_magnifier  = themes_path .. "zenburn/layouts/magnifier.png"
-theme.layout_floating   = themes_path .. "zenburn/layouts/floating.png"
-theme.layout_cornernw   = themes_path .. "zenburn/layouts/cornernw.png"
-theme.layout_cornerne   = themes_path .. "zenburn/layouts/cornerne.png"
-theme.layout_cornersw   = themes_path .. "zenburn/layouts/cornersw.png"
-theme.layout_cornerse   = themes_path .. "zenburn/layouts/cornerse.png"
--- }}}
-
 -- {{{ Titlebar
 theme.titlebar_close_button_focus  = themes_path .. "zenburn/titlebar/close_focus.png"
 theme.titlebar_close_button_normal = themes_path .. "zenburn/titlebar/close_normal.png"
@@ -130,7 +109,31 @@ theme.titlebar_maximized_button_normal_active = themes_path .. "zenburn/titlebar
 theme.titlebar_maximized_button_focus_inactive  = themes_path .. "zenburn/titlebar/maximized_focus_inactive.png"
 theme.titlebar_maximized_button_normal_inactive = themes_path .. "zenburn/titlebar/maximized_normal_inactive.png"
 -- }}}
+
+
+
+
+-- {{{ Layout
+theme.layout_tile       = themes_path .. "zenburn/layouts/tile.png"
+theme.layout_tileleft   = themes_path .. "zenburn/layouts/tileleft.png"
+theme.layout_tilebottom = themes_path .. "zenburn/layouts/tilebottom.png"
+theme.layout_tiletop    = themes_path .. "zenburn/layouts/tiletop.png"
+theme.layout_fairv      = themes_path .. "zenburn/layouts/fairv.png"
+theme.layout_fairh      = themes_path .. "zenburn/layouts/fairh.png"
+theme.layout_spiral     = themes_path .. "zenburn/layouts/spiral.png"
+theme.layout_dwindle    = themes_path .. "zenburn/layouts/dwindle.png"
+theme.layout_max        = themes_path .. "zenburn/layouts/max.png"
+theme.layout_fullscreen = themes_path .. "zenburn/layouts/fullscreen.png"
+theme.layout_magnifier  = themes_path .. "zenburn/layouts/magnifier.png"
+theme.layout_floating   = themes_path .. "zenburn/layouts/floating.png"
+theme.layout_cornernw   = themes_path .. "zenburn/layouts/cornernw.png"
+theme.layout_cornerne   = themes_path .. "zenburn/layouts/cornerne.png"
+theme.layout_cornersw   = themes_path .. "zenburn/layouts/cornersw.png"
+theme.layout_cornerse   = themes_path .. "zenburn/layouts/cornerse.png"
 -- }}}
+
+-- }}}
+
 
 return theme
 
