@@ -352,6 +352,15 @@ globalkeys = gears.table.join(
 	{ description = "next music", group = "hotkeys" }),
 
 
+	-- Screenshots
+	awful.key({}, "Print", function()
+		awful.spawn.with_shell("flameshot full")
+	end, { description = "take a full screenshot", group = "hotkeys" }),
+
+	awful.key({ "Control" }, "Print", function()
+		awful.spawn.with_shell("flameshot gui")
+	end, { description = "take a area screenshot", group = "hotkeys" }),    
+
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {
