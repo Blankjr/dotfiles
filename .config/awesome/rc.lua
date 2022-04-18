@@ -18,6 +18,11 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
+-- -- (Custom Import for Media Keys)
+-- -- Bling
+-- local bling = require("module.bling")
+-- local playerctl = bling.signal.playerctl.lib()
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -325,6 +330,27 @@ globalkeys = gears.table.join(
     awful.key({ modkey },            "b",     function () 
     awful.util.spawn("firefox-developer-edition") end,
               {description = "Open Firefox Dev", group = "launcher"}), 
+    -- Audio control
+    awful.key({ }             , "XF86AudioRaiseVolume", function ()
+       awful.util.spawn("amixer set Master 9%+") end),
+    awful.key({ }             , "XF86AudioLowerVolume", function ()
+       awful.util.spawn("amixer set Master 9%-") end),
+    awful.key({  }             , "XF86AudioMute", function ()
+       awful.util.spawn("amixer sset Master toggle") end),
+    
+    -- Music Control
+    awful.key({}, "XF86AudioPlay", function()
+		 awful.util.spawn("playerctl -a play-pause") end,
+	{ description = "toggle music", group = "hotkeys" }), 
+    
+    awful.key({}, "XF86AudioPrev", function()
+		awful.util.spawn("playerctl previous") end,
+	{ description = "previous music", group = "hotkeys" }),
+
+	awful.key({}, "XF86AudioNext", function()
+		awful.util.spawn("playerctl next") end,
+	{ description = "next music", group = "hotkeys" }),
+
 
     awful.key({ modkey }, "x",
               function ()
@@ -578,4 +604,19 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Autostart
 --awful.spawn.with_shell("nitrogen --set-zoom-fill --random ~/.dotfiles/wallpaper")
 awful.spawn.with_shell("nitrogen --restore")
+awful.spawn.with_shell("picom")
 awful.spawn.with_shell("flameshot")
+awful.spawn.with_shell("gtk-launch mullvad-vpn.desktop")
+
+-- Autorun programs
+-- autorun = true
+-- autorunApps =
+-- {
+--    "Mullvad VPN",
+
+-- }
+-- if autorun then
+--    for app = 1, #autorunApps do
+--        awful.util.spawn(autorunApps[app])
+--    end
+-- end

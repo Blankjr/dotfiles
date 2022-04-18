@@ -4,9 +4,11 @@ map ctrl+shift+9 next_window
 #: Previous window
 map ctrl+shift+8 next_window
 
+#include ./themes/DimmedMonokai.conf
+#include ./theme.conf
+
+
 # BEGIN_KITTY_THEME
-#  xCode Dark
+# Xcodedark
 include current-theme.conf
 # END_KITTY_THEME
-
-background_opacity 0.9
