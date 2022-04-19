@@ -18,11 +18,11 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
 
--- -- (Custom Import for Media Keys)
--- -- Bling
--- local bling = require("module.bling")
--- local playerctl = bling.signal.playerctl.lib()
 
+
+
+-- Fix notification sizing for apps like tauon
+naughty.config.defaults.icon_size = 32
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -360,6 +360,28 @@ globalkeys = gears.table.join(
 	awful.key({ "Control" }, "Print", function()
 		awful.spawn.with_shell("flameshot gui")
 	end, { description = "take a area screenshot", group = "hotkeys" }),    
+
+    -- Clipboard Manager
+    awful.key({ modkey }, "c", function () awful.spawn.with_shell("echo $(xclip -o) >> $HOME/.cache/xclip/clipboard.txt") end,
+              {description = "copy to clipboard", group = "clipboard"}), 
+    
+    
+    -- Select from clipboard
+    awful.key({ modkey }, "v", function () awful.spawn.with_shell("tac $HOME/.cache/xclip/clipboard.txt | rofi -dmenu | tr -d '\n' | xclip -sel c") end,
+              {description = "select from clipboard", group = "clipboard"}),
+
+
+
+
+-- require("clipboard")
+-- -- clipboard
+-- -- {{{
+-- awful.key({ modkey },            "c",     copy_to_clipboard),
+-- awful.key({ modkey, "Shift"   }, "c",     clear_clipboard),
+-- awful.key({ modkey },            "v",     clipboard_menu),
+-- -- }}}
+
+
 
     awful.key({ modkey }, "x",
               function ()

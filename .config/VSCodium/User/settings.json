@@ -1,6 +1,5 @@
 {
     "workbench.iconTheme": "eq-material-theme-icons",
-    "editor.fontSize": 16,
     "editor.formatOnPaste": true,
     "javascript.validate.enable": false,
     "window.zoomLevel": 2,
@@ -12,6 +11,10 @@
     "cSpell.allowCompoundWords": true,
     "git.confirmSync": false,
     "editor.fontFamily": "Operator Mono Medium",
+    "editor.fontSize": 16,
+    // "editor.fontFamily": "Iosevka Nerd Font, Iosevka Custom",
+    // "editor.fontWeight": "400",
+    // "editor.lineHeight": 21,
     "editor.formatOnSave": true,
     //vertical line
     "editor.rulers": [
