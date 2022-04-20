@@ -1,0 +1,19 @@
+#! /bin/sh
+
+selscreen=$(printf "🖥️ main\n🖥️ left\n" | rofi -dmenu)
+chosen=$(printf "🔆100\n🔆80\n🔆60\n🔅40\n🔅20\n" | rofi -dmenu)
+
+case "$selscreen" in
+"🖥️ main") screen="DisplayPort-0" ;;
+"🖥️ left") screen="DisplayPort-1" ;;
+*) exit 1 ;;
+esac
+
+case "$chosen" in
+"🔆100") xrandr --output "$screen" --brightness 1. ;;
+"🔆80") xrandr --output "$screen" --brightness 0.8 ;;
+"🔆60") xrandr --output "$screen" --brightness 0.6 ;;
+"🔅40") xrandr --output "$screen" --brightness 0.4 ;;
+"🔅20") xrandr --output "$screen" --brightness 0.2 ;;
+*) exit 1 ;;
+esac

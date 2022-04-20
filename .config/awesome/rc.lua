@@ -360,15 +360,37 @@ globalkeys = gears.table.join(
 	awful.key({ "Control" }, "Print", function()
 		awful.spawn.with_shell("flameshot gui")
 	end, { description = "take a area screenshot", group = "hotkeys" }),    
+    -- Power Menu
+    awful.key({ "Control", "Mod1" }, "Delete", function()
+		awful.spawn.with_shell("powermenu")
+	end, { description = "Power Menu", group = "hotkeys" }), 
+        -- Brightness Menu
+    awful.key({ "Control", "Mod1" }, "Insert", function()
+		awful.spawn.with_shell("brightness")
+	end, { description = "Power Menu", group = "hotkeys" }), 
+    -- Emoji Picker
+    awful.key({ modkey }, ".", function()
+		awful.spawn.with_shell("rofi -show emoji")
+	end, { description = "Emoji Picker", group = "hotkeys" }), 
+    -- Calculator
+    awful.key({ modkey }, "c", function()
+		awful.spawn.with_shell("rofi -show calc -modi calc -no-show-match -no-sort")
+	end, { description = "Calculator", group = "hotkeys" }), 
 
     -- Clipboard Manager
-    awful.key({ modkey }, "c", function () awful.spawn.with_shell("echo $(xclip -o) >> $HOME/.cache/xclip/clipboard.txt") end,
-              {description = "copy to clipboard", group = "clipboard"}), 
+    -- spawning copyq on end of file
+    -- ToDo: integrate copyq into rofi 
+    -- awful.key({ "Control" }, "c", function () awful.spawn.with_shell("echo $(xclip -o) | xclip -s c >> $HOME/.cache/xclip/clipboard.txt") end,
+    --           {description = "copy to clipboard", group = "clipboard"}), 
+        -- awful.key({ "Control" }, "c", function () awful.spawn.with_shell("xclip -o | xclip -s c") end,
+        --       {description = "copy to clipboard", group = "clipboard"}), 
+    -- awful.key({ "Control" }, "c", function () awful.spawn.with_shell("echo $(xclip -o) >> $HOME/.cache/xclip/clipboard.txt") end, 
+    --         {description = "copy to clipboard", group = "clipboard"}),          
     
     
     -- Select from clipboard
-    awful.key({ modkey }, "v", function () awful.spawn.with_shell("tac $HOME/.cache/xclip/clipboard.txt | rofi -dmenu | tr -d '\n' | xclip -sel c") end,
-              {description = "select from clipboard", group = "clipboard"}),
+    -- awful.key({ modkey }, "v", function () awful.spawn.with_shell("tac $HOME/.cache/xclip/clipboard.txt | rofi -dmenu | tr -d '\n' | xclip -sel c") end,
+    --           {description = "select from clipboard", group = "clipboard"}),
 
 
 
@@ -638,6 +660,8 @@ awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("flameshot")
 awful.spawn.with_shell("gtk-launch mullvad-vpn.desktop")
+awful.spawn.with_shell("copyq") 
+ -- set modkey v for small menu in copyq settings
 
 -- Autorun programs
 -- autorun = true

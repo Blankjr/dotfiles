@@ -1,0 +1,14 @@
+#!/bin/bash
+
+green=$(tput setaf 2)
+normal=$(tput sgr0)
+
+for n in {0..9}; do
+    echo -e -n "\n${green}${n}:${normal} "
+    copyq read "$n" | head -1 | tr -d '\n' | tr -d '\t' | cut -c 1-141
+    echo
+done | sed '/^$/d'
+
+read -p "Select item: " i
+
+copyq select "$i"
