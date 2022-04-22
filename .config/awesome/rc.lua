@@ -326,10 +326,14 @@ globalkeys = gears.table.join(
     awful.key({ modkey },            "space",     function () 
     awful.util.spawn("rofi -show drun") end,
               {description = "run prompt", group = "launcher"}),
-
+    -- Browser
     awful.key({ modkey },            "b",     function () 
     awful.util.spawn("firefox-developer-edition") end,
               {description = "Open Firefox Dev", group = "launcher"}), 
+    awful.key({ modkey, "Mod1" },            "b",     function () 
+    awful.util.spawn("librewolf") end,
+              {description = "Open Librewolf", group = "launcher"}), 
+
     -- Audio control
     awful.key({ }             , "XF86AudioRaiseVolume", function ()
        awful.util.spawn("amixer set Master 9%+") end),

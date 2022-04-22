@@ -22,13 +22,20 @@ alias amend='commit --amend -m'
 alias commit='commit -m'
 alias rndwall='styli.sh -k -s anime'
 alias clock='tty-clock'
+#----Downloading................................................
+# alias dla= "yt\-dlp \-f \'ba\'"
+# alias dl= "yt\-dlp"
+# alias dlo= "stream\-dl"
+#----Media-----------------------------------------------------
+alias i='nsxiv'
+
 #---------------------------------------------- chpwd pyvenv ---
 python_venv() {
   MYVENV=./venv
   # when you cd into a folder that contains $MYVENV
-  [[ -d $MYVENV ]] && source $MYVENV/bin/activate > /dev/null 2>&1
+  [[ -d $MYVENV ]] && source $MYVENV/bin/activate >/dev/null 2>&1
   # when you cd into a folder that doesn't
-  [[ ! -d $MYVENV ]] && deactivate > /dev/null 2>&1
+  [[ ! -d $MYVENV ]] && deactivate >/dev/null 2>&1
 }
 autoload -U add-zsh-hook
 add-zsh-hook chpwd python_venv
@@ -44,7 +51,4 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
-
-
 source /home/christian/.config/broot/launcher/bash/br
-
