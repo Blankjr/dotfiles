@@ -1,0 +1,8 @@
+#!/bin/sh
+
+word=$(rofi -dmenu -p "Enter Word: ")
+mean=$(rofi -dmenu -p "Enter Meaning: ")
+if [ -z "$word" ] || [ -z "$mean" ]; then
+    exit 1
+fi
+echo "$word -> $mean" >>~/.local/share/vocab/words.txt
