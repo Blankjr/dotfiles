@@ -12,9 +12,6 @@
     "git.confirmSync": false,
     "editor.fontFamily": "Operator Mono Medium",
     "editor.fontSize": 16,
-    // "editor.fontFamily": "Iosevka Nerd Font, Iosevka Custom",
-    // "editor.fontWeight": "400",
-    // "editor.lineHeight": 21,
     "editor.formatOnSave": true,
     //vertical line
     "editor.rulers": [
@@ -66,11 +63,18 @@
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
     "prettier.tabWidth": 4,
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.fontSize": 12,
     "workbench.startupEditor": "none",
     "terminal.integrated.fontFamily": "mononoki Nerd Font Mono Regular",
     "workbench.colorTheme": "Make Apps Theme",
-    "jupyter.generateSVGPlots": true
+    "jupyter.generateSVGPlots": true,
+    "projectManager.git.baseFolders": [
+        "~/dev"
+    ],
+    "editor.formatOnSave": true
 }

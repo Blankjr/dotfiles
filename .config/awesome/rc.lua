@@ -333,6 +333,10 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Mod1" },            "b",     function () 
     awful.util.spawn("librewolf") end,
               {description = "Open Librewolf", group = "launcher"}), 
+    awful.key({ modkey, "Control" },            "b",     function () 
+    awful.util.spawn("librewolf") end,
+              {description = "Open Librewolf", group = "launcher"}),               
+              
 
     -- Audio control
     awful.key({ }             , "XF86AudioRaiseVolume", function ()
