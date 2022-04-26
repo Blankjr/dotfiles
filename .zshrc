@@ -37,6 +37,9 @@ alias ll='exa --icons -lah --group-directories-first'
 alias ls='exa --icons --group-directories-first'
 alias tree='exa --icons --tree'
 alias cat='bat'
+alias grep='rp'
+alias top='btm'
+#alias cd='zoxide' #find/predict cd autojump
 ###Manpager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 #export MANPAGER="nvim -c 'set ft=man' -"
