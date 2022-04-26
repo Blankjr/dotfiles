@@ -36,6 +36,10 @@ alias la='exa --icons -a --group-directories-first'
 alias ll='exa --icons -lah --group-directories-first'
 alias ls='exa --icons --group-directories-first'
 alias tree='exa --icons --tree'
+alias cat='bat'
+###Manpager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+#export MANPAGER="nvim -c 'set ft=man' -"
 
 alias lsa='br -dph'
 #alias ls='br -dp'
