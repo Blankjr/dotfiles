@@ -8,6 +8,8 @@ fi
 if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
+# fix Backspace ssh problem for kitty terminal
+[[ "$TERM" == "xterm-kitty" ]] && alias ssh="kitty +kitten ssh"
 
 #alias fzf-open='fzf | xargs -I {} xdg-open {}'
 alias fzf-open=' (fzf --height 40% --reverse </dev/tty) | xargs -I {} xdg-open {}'
@@ -39,6 +41,7 @@ alias tree='exa --icons --tree'
 alias cat='bat'
 alias grep='rp'
 alias top='btm'
+alias lf=lf-ueberzug
 #alias cd='zoxide' #find/predict cd autojump
 ###Manpager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
