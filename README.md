@@ -5,8 +5,8 @@
 - Window Manager: Awesomewm
 - Compositor: Picom
 - Launcher: Rofi
-- Terminal: Kitty
-- OS: Manjaro
+- Terminal: Kitty & Alacritty
+- OS: Arc
 - Code Editor
   - Neovim & VSCodium
 
@@ -19,7 +19,7 @@
   - Brave
   - Chromium
 - File Manager
-  - PCManFM
+  - Thunar
 
 ## Themes & Fonts
 
