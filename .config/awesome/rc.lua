@@ -345,8 +345,6 @@ globalkeys = my_table.join(
         {description = "rofi fullscreen" , group = "function keys" }),
     awful.key({ modkey }, "F12", function () awful.util.spawn( "rofi -show drun" ) end,
         {description = "rofi" , group = "function keys" }),
-    awful.key({ modkey }, "space", function () awful.util.spawn( "rofi -show drun" ) end,
-        {description = "rofi -show" , group = "function keys" }),        
 
     -- super + ...
     awful.key({ modkey }, "c", function () awful.util.spawn( "conky-toggle" ) end,
@@ -455,27 +453,25 @@ globalkeys = my_table.join(
         {description = "Scrot", group = "screenshots"}),
     awful.key({ modkey1           }, "Print", function () awful.util.spawn( "xfce4-screenshooter" ) end,
         {description = "Xfce screenshot", group = "screenshots"}),
-    awful.key({ modkey1, "Shift"  }, "Print", function() awful.util.spawn("gnome-screenshot -i") end,
-        {description = "Gnome screenshot", group = "screenshots"}),
+    awful.key({ modkey1, "Shift"  }, "Print", function() awful.util.spawn("flameshot gui") end,
+        {description = "Flameshot screenshot", group = "screenshots"}),
 
     -- Personal keybindings}}}
     -- Custom Keybindings ---------------------------------------------------------------------------------------------------
     -- Rofi Prompt
-    --awful.key({ modkey },            "d",     function () 
-        --awful.util.spawn("rofi -show run") end,
-                  --{description = "run prompt", group = "launcher"}),
-    --awful.key({ modkey },            "space",     function () 
-    --awful.util.spawn("rofi -show drun") end,
-                --{description = "run prompt", group = "launcher"}),
+    awful.key({ modkey },            "d",     function () 
+        awful.util.spawn("rofi -show run") end,
+                  {description = "Exe launcher rofi", group = "launcher"}),
+    awful.key({ modkey },            "space",     function () 
+    awful.util.spawn("rofi -show drun") end,
+                {description = "App launcher rofi", group = "launcher"}),
     -- Browser
-    --awful.key({ modkey },            "b",     function () 
-        --awful.util.spawn("firefox-developer-edition") end,
-                  --{description = "Open Firefox Dev", group = "launcher"}), 
-        --awful.key({ modkey, "Mod1" },            "b",     function () 
-        --awful.util.spawn("librewolf") end,
-                  --{description = "Open Librewolf", group = "launcher"}), 
-        --awful.key({ modkey, "Control" },            "b",     function () 
-        --awful.util.spawn("librewolf") end,
+    awful.key({ modkey },            "b",     function () 
+        awful.util.spawn("firefox-developer-edition") end,
+                  {description = "Open Firefox Dev", group = "launcher"}), 
+    awful.key({ modkey, modkey1 },            "b",     function () 
+        awful.util.spawn("librewolf") end,
+                  {description = "Open Librewolf", group = "launcher"}), 
 
     -- Hotkeys Awesome
 
@@ -598,7 +594,7 @@ globalkeys = my_table.join(
         {description = "go back", group = "client"}),
 
     -- Show/Hide Wibox
-    awful.key({ modkey }, "b", function ()
+    awful.key({ modkey }, "g", function ()
             for s in screen do
                 s.mywibox.visible = not s.mywibox.visible
                 if s.mybottomwibox then
