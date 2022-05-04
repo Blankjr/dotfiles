@@ -25,3 +25,14 @@ _darcs
 code-extensions
 wallpaper
 other
+nightTab.json
+
+# Prevent Conflicts pre full merging settings
+.zshenv
+.zshrc
+.bashrc
+.config/picom
+.config/mpv
+.config/mpv.conf
+.config/rofi
+
