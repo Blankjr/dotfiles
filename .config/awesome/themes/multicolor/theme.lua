@@ -46,7 +46,7 @@ theme.widget_uptime                             = theme.confdir .. "/icons/ac.pn
 theme.widget_cpu                                = theme.confdir .. "/icons/cpu.png"
 theme.widget_weather                            = theme.confdir .. "/icons/dish.png"
 theme.widget_fs                                 = theme.confdir .. "/icons/fs.png"
-theme.widget_mem                                = theme.confdir .. "/icons/mem.png"
+theme.widget_mem                                = theme.confdir .. "/icons/mem_purple.png"
 theme.widget_netdown                            = theme.confdir .. "/icons/net_down.png"
 theme.widget_netup                              = theme.confdir .. "/icons/net_up.png"
 theme.widget_mail                               = theme.confdir .. "/icons/mail.png"
@@ -224,7 +224,8 @@ local netupinfo = lain.widget.net({
 local memicon = wibox.widget.imagebox(theme.widget_mem)
 local memory = lain.widget.mem({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.font, "#e0daff", mem_now.used .. "M "))
+        widget:set_markup(markup.fontfg(theme.font, "#c91899", mem_now.used .. "M "))
+        -- widget:set_markup(markup.fontfg(theme.font, "#e0daff", mem_now.used .. "M "))
         --widget:set_markup(markup.fontfg(theme.font, "#e0da37", mem_now.used .. "M "))
     end
 })
