@@ -23,6 +23,7 @@ run volumeicon
 #you can set wallpapers in themes as well
 feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #run applications from startup
+run redshift
 #run firefox
 #run atom
 #run dropbox
