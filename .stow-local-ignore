@@ -28,8 +28,8 @@ other
 nightTab.json
 
 # Prevent Conflicts pre full merging settings
-.zshenv
 .zshrc
+.zshrc.bak
 .bashrc
 .config/picom
 .config/mpv

@@ -1,4 +1,6 @@
-
+typeset -U path PATH
+path=(~/.local/bin $path)
+export PATH
 # lf icons
 export LF_ICONS="di=📁:\
 fi=📃:\
