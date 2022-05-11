@@ -14,4 +14,4 @@
     find "$HOME/Music"
     find "$HOME/Downloads/"
     find "$HOME/Videos/ytdownloads"
-} | grep -E '.opus|mp3' | fzf | sed -e "s/'/'\\\\''/g; 1s/^/'/; \$s/\$/'/" | xargs -I {} mpv --no-video '{}'
+} | grep -E '.opus|mp3' | rofi -dmenu | sed -e "s/'/'\\\\''/g; 1s/^/'/; \$s/\$/'/" | xargs -I {} mpv --no-video '{}'

@@ -1,0 +1,2 @@
+#!/bin/bash
+selected=$(ls ~/.local/bin/rofi/ | rofi -dmenu -p "Run: ") && bash ~/.local/bin/rofi/$selected
