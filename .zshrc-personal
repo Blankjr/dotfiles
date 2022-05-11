@@ -19,6 +19,7 @@ alias ls='exa --icons --group-directories-first'
 alias tree='exa --icons --tree'
 alias cat='bat'
 alias grep='rp'
+alias code='rofi-code'
 #-----Python------------------------------------------------------
 alias pyae='deactivate &> /dev/null; source ./venv/bin/activate'
 alias pyde='deactivate'
