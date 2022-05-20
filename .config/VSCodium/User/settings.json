@@ -10,9 +10,8 @@
     "git.autofetch": true,
     "cSpell.allowCompoundWords": true,
     "git.confirmSync": false,
-    "editor.fontFamily": "Operator Mono Medium",
+    "editor.fontFamily": "JetBrains Mono Regular Nerd Font Complete Mono",
     "editor.fontSize": 16,
-    "editor.formatOnSave": true,
     //vertical line
     "editor.rulers": [
         100
@@ -70,11 +69,16 @@
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.integrated.fontSize": 12,
     "workbench.startupEditor": "none",
-    "terminal.integrated.fontFamily": "mononoki Nerd Font Mono Regular",
-    "workbench.colorTheme": "Make Apps Theme",
+    "workbench.colorTheme": "Tokyo Night",
     "jupyter.generateSVGPlots": true,
     "projectManager.git.baseFolders": [
         "~/dev"
     ],
-    "editor.formatOnSave": true
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.fontLigatures": true,
+    "terminal.integrated.fontFamily": "JetBrains Mono Regular Nerd Font Complete Mono",
+    "editor.formatOnSave": true,
+    // "terminal.integrated.customGlyphs": false
 }
