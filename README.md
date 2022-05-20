@@ -1,12 +1,15 @@
 # Dotfiles
 
+## Screenshot
+![mainscreen](./other/awesomewm2.png)
+
 ## Main Components
 
 - Window Manager: Awesomewm
 - Compositor: Picom
 - Launcher: Rofi
-- Terminal: Kitty & Alacritty
-- OS: Arc
+- Terminal: Kitty
+- OS: Arch Linux
 - Code Editor
   - Neovim & VSCodium
 
@@ -16,23 +19,24 @@
 - Browser
   - Librewolf
   - Firefox Developer Edition
-  - Brave
   - Chromium
 - File Manager
   - Thunar
+- Rest Client: Insomnia
 
 ## Themes & Fonts
 
 - Kitty: XCode Dark
 - GTK2/3 :
-  - Breeze
-  - Icons: breeze-dark
+  - Arc-Dark
+  - Icons: Sardi Arc
+  - Mouse Cursor: Bibata-Modern-Ice
 - VSCodium: 
-  - Color Theme: Make Apps Theme or Eva Theme (italic dark)
-  - Font: Operator Mono Medium
+  - Color Theme: Make Apps Theme, Tokyo Night or Eva Theme (italic dark)
+  - Font: JetBrains Mono Nerd Font
   - Product Icon Theme: Minimalist Product Icon Theme
   - File Icon Theme: Material Icon Theme
-- Firefox Devoloper Edition
+- Firefox Developer Edition
   - Catppuccin-dark-peach
 - Librewolf
   - beautifulFire anime
