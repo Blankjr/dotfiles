@@ -357,7 +357,7 @@ globalkeys = my_table.join(
         {description = "rofi theme selector", group = "super"}),
     awful.key({ modkey }, "t", function () awful.util.spawn( terminal ) end,
         {description = "terminal", group = "super"}),
-    awful.key({ modkey }, "v", function () awful.util.spawn( "pavucontrol" ) end,
+    awful.key({ modkey }, "o", function () awful.util.spawn( "pavucontrol" ) end,
         {description = "pulseaudio control", group = "super"}),
     --awful.key({ modkey }, "u", function () awful.screen.focused().mypromptbox:run() end,
           --{description = "run prompt", group = "super"}),
@@ -1039,7 +1039,7 @@ awful.rules.rules = {
     { rule_any = {
         instance = {
           "DTA",  -- Firefox addon DownThemAll.
-          "copyq",  -- Includes session name in class.
+        --   "copyq",  -- Includes session name in class.
           "gcolor3",
         },
         class = {
@@ -1080,7 +1080,8 @@ awful.rules.rules = {
     { rule_any = {
        	class = {
        		"Polkit-gnome-authentication-agent-1",
-			"Arcolinux-calamares-tool.py"
+			"Arcolinux-calamares-tool.py",
+            "copyq"
 				},
 				},
       	properties = { floating = true },
