@@ -1040,6 +1040,7 @@ awful.rules.rules = {
         instance = {
           "DTA",  -- Firefox addon DownThemAll.
           "copyq",  -- Includes session name in class.
+          "gcolor3",
         },
         class = {
           "Arandr",

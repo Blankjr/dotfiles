@@ -24,6 +24,8 @@ run volumeicon
 feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #run applications from startup
 run redshift
+run mullvad
+run copyq
 #run firefox
 #run atom
 #run dropbox
