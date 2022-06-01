@@ -1,0 +1,17 @@
+#! /bin/sh
+
+selscreen=$(printf "🖥️ left\n🖥️ main\n" | rofi -dmenu)
+chosen=$(printf "normal\nleft\nright\n" | rofi -dmenu)
+
+case "$selscreen" in
+"🖥️ main") screen="DisplayPort-0" ;;
+"🖥️ left") screen="DisplayPort-1" ;;
+*) exit 1 ;;
+esac
+
+case "$chosen" in
+"normal") xrandr --output "$screen" --rotate normal ;;
+"left") xrandr --output "$screen" --rotate left ;;
+"right") xrandr --output "$screen" --rotate right ;;
+*) exit 1 ;;
+esac
