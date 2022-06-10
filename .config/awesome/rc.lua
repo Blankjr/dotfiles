@@ -475,6 +475,10 @@ globalkeys = my_table.join(
     awful.key({ modkey, modkey1 },            "b",     function () 
         awful.util.spawn("librewolf") end,
                   {description = "Open Librewolf", group = "launcher"}), 
+    -- Project Select VS-Codium
+    awful.key({ modkey },            "p",     function () 
+        awful.util.spawn("rofi-code") end,
+                  {description = "Rofi VS-Codium Workspace", group = "launcher"}),
 
     -- Hotkeys Awesome
 
