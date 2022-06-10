@@ -461,8 +461,10 @@ globalkeys = my_table.join(
     -- Custom Keybindings ---------------------------------------------------------------------------------------------------
     -- Rofi Prompt
     awful.key({ modkey },            "d",     function () 
-        awful.util.spawn("rofi -show run") end,
-                  {description = "Exe launcher rofi", group = "launcher"}),
+        awful.util.spawn("rofi-run") end,
+    -- awful.key({ modkey },            "d",     function () 
+    --     awful.util.spawn("rofi -show run") end,
+                  {description = "rofi custom scripts launcher", group = "launcher"}),
     awful.key({ modkey },            "space",     function () 
     -- awful.util.spawn("rofi -show drun") end,
     --             {description = "App launcher rofi", group = "launcher"}),
