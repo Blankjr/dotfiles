@@ -246,6 +246,7 @@ awful.util.mymainmenu = freedesktop.menu.build({
         { "Sleep", "systemctl suspend" },
         { "Restart", "systemctl reboot" },
         { "Shutdown", "systemctl poweroff" },
+        {"Lock", "i3lock --color 000000"},
         -- other triads can be put here
     }
 })
