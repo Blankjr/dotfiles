@@ -80,5 +80,6 @@
     "editor.fontLigatures": true,
     "terminal.integrated.fontFamily": "JetBrains Mono Regular Nerd Font Complete Mono",
     "editor.formatOnSave": true,
+    "typescript.preferences.importModuleSpecifier": "relative",
     // "terminal.integrated.customGlyphs": false
 }
