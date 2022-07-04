@@ -317,8 +317,8 @@ globalkeys = my_table.join(
     {description = "show dmenu", group = "hotkeys"}),
 
     -- Function keys
-    awful.key({ }, "F12", function () awful.util.spawn( "xfce4-terminal --drop-down" ) end,
-        {description = "dropdown terminal" , group = "function keys"}),
+    -- awful.key({ }, "F12", function () awful.util.spawn( "xfce4-terminal --drop-down" ) end,
+    --     {description = "dropdown terminal" , group = "function keys"}),
 
 
     -- super + ... function keys
@@ -344,8 +344,8 @@ globalkeys = my_table.join(
         {description = mediaplayer , group = "function keys" }),
     awful.key({ modkey }, "F11", function () awful.util.spawn( "rofi -theme-str 'window {width: 100%;height: 100%;}' -show drun" ) end,
         {description = "rofi fullscreen" , group = "function keys" }),
-    awful.key({ modkey }, "F12", function () awful.util.spawn( "rofi -show drun" ) end,
-        {description = "rofi" , group = "function keys" }),
+    -- awful.key({ modkey }, "F12", function () awful.util.spawn( "rofi -show drun" ) end,
+    --     {description = "rofi" , group = "function keys" }),
 
     -- super + ...
     awful.key({ modkey }, "c", function () awful.util.spawn( "conky-toggle" ) end,
@@ -434,10 +434,10 @@ globalkeys = my_table.join(
         {description = "Wallpaper previous", group = "altkey"}),
     awful.key({ altkey }, "f", function () awful.util.spawn( "variety -f" ) end,
         {description = "Wallpaper favorite", group = "altkey"}),
-    awful.key({ altkey }, "Left", function () awful.util.spawn( "variety -p" ) end,
-        {description = "Wallpaper previous", group = "altkey"}),
-    awful.key({ altkey }, "Right", function () awful.util.spawn( "variety -n" ) end,
-        {description = "Wallpaper next", group = "altkey"}),
+    -- awful.key({ altkey }, "Left", function () awful.util.spawn( "variety -p" ) end,
+    --     {description = "Wallpaper previous", group = "altkey"}),
+    -- awful.key({ altkey }, "Right", function () awful.util.spawn( "variety -n" ) end,
+    --     {description = "Wallpaper next", group = "altkey"}),
     awful.key({ altkey }, "Up", function () awful.util.spawn( "variety --pause" ) end,
         {description = "Wallpaper pause", group = "altkey"}),
     awful.key({ altkey }, "Down", function () awful.util.spawn( "variety --resume" ) end,
@@ -695,22 +695,37 @@ globalkeys = my_table.join(
 
     -- ALSA volume control
     --awful.key({ modkey1 }, "Up",
-    awful.key({ }, "XF86AudioRaiseVolume",
+    -- awful.key({ }, "XF86AudioRaiseVolume",
+    --     function ()
+    --         os.execute(string.format("amixer -q set %s 5%%+", beautiful.volume.channel))
+    --         beautiful.volume.update()
+    --     end),
+        awful.key({ modkey1}, "F12",
         function ()
             os.execute(string.format("amixer -q set %s 5%%+", beautiful.volume.channel))
             beautiful.volume.update()
         end),
     --awful.key({ modkey1 }, "Down",
-    awful.key({ }, "XF86AudioLowerVolume",
+    -- awful.key({ }, "XF86AudioLowerVolume",
+        -- function ()
+            -- os.execute(string.format("amixer -q set %s 5%%-", beautiful.volume.channel))
+            -- beautiful.volume.update()
+        -- end),
+        awful.key({ modkey1}, "F11",
         function ()
             os.execute(string.format("amixer -q set %s 5%%-", beautiful.volume.channel))
             beautiful.volume.update()
-        end),
-    awful.key({ }, "XF86AudioMute",
+        end),        
+    -- awful.key({ }, "XF86AudioMute",
+    --     function ()
+    --         os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
+    --         beautiful.volume.update()
+    --     end),
+        awful.key({ modkey1}, "F10",
         function ()
-            os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
+            os.execute(string.format("amixer -q set %s toggle", beautiful.volume.channel))
             beautiful.volume.update()
-        end),
+        end),    
     awful.key({ modkey1, "Shift" }, "m",
         function ()
             os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
