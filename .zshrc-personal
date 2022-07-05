@@ -11,7 +11,7 @@ alias v='nvim'
 alias i='nsxiv'
 alias icat='kitty +kitten icat'
 alias smpv='mpv "$(ls | shuf | head -n 1)"'
-alias z='zathura'
+alias p='zathura'
 alias speedread='tspreed'
 #----Utilities-------------------------------------------------------
 alias fzf-open=' (fzf --height 40% --reverse </dev/tty) | xargs -I {} xdg-open {}'
@@ -31,6 +31,8 @@ alias cd2='cd ../..'
 alias cd3='cd ../../..'
 alias cd4='cd ../../../..'
 alias cd5='cd ../../../../..'
+alias cd='z'
+alias zz='z -'
 alias pdftopng= 'pdftoppm -png'
 #-----Git-----------------------------------------------------------
 alias gts='git status'
@@ -55,3 +57,4 @@ autoload -U add-zsh-hook
 add-zsh-hook chpwd python_venv
 
 python_venv
+eval "$(zoxide init zsh)"
