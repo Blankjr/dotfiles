@@ -459,7 +459,7 @@ globalkeys = my_table.join(
     -- 75% Keyboard  Screenshots
     awful.key({ modkey1, "Shift"  }, "F12", function() awful.util.spawn("flameshot gui") end,
         {description = "Flameshot screenshot", group = "screenshots"}),
-    awful.key({ modkey1  }, "F12", function() awful.util.spawn("xfce4-screenshooter") end,
+    awful.key({ modkey1  }, "F12", function() awful.util.spawn("scrot 'Arc-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/scr/full'") end,
         {description = "Flameshot screenshot", group = "screenshots"}),
     -- Personal keybindings}}}
     -- Custom Keybindings ---------------------------------------------------------------------------------------------------
