@@ -450,7 +450,7 @@ globalkeys = my_table.join(
     --    {description = "Xlunch app launcher", group = "altkey"}),
 
     -- screenshots
-    awful.key({ }, "Print", function () awful.util.spawn("scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'") end,
+    awful.key({ }, "Print", function () awful.util.spawn("scrot 'Arc-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'") end,
         {description = "Scrot", group = "screenshots"}),
     awful.key({ modkey1           }, "Print", function () awful.util.spawn( "xfce4-screenshooter" ) end,
         {description = "Xfce screenshot", group = "screenshots"}),
@@ -694,33 +694,33 @@ globalkeys = my_table.join(
               {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control
-    --awful.key({ modkey1 }, "Up",
-    -- awful.key({ }, "XF86AudioRaiseVolume",
-    --     function ()
-    --         os.execute(string.format("amixer -q set %s 5%%+", beautiful.volume.channel))
-    --         beautiful.volume.update()
-    --     end),
-        awful.key({ modkey1}, "F12",
+    -- awful.key({ modkey1 }, "Up",
+    awful.key({ }, "XF86AudioRaiseVolume",
         function ()
             os.execute(string.format("amixer -q set %s 5%%+", beautiful.volume.channel))
             beautiful.volume.update()
         end),
-    --awful.key({ modkey1 }, "Down",
-    -- awful.key({ }, "XF86AudioLowerVolume",
+        -- awful.key({ modkey1}, "F12",
         -- function ()
-            -- os.execute(string.format("amixer -q set %s 5%%-", beautiful.volume.channel))
-            -- beautiful.volume.update()
+        --     os.execute(string.format("amixer -q set %s 5%%+", beautiful.volume.channel))
+        --     beautiful.volume.update()
         -- end),
-        awful.key({ modkey1}, "F11",
+    -- awful.key({ modkey1 }, "Down",
+    awful.key({ }, "XF86AudioLowerVolume",
         function ()
             os.execute(string.format("amixer -q set %s 5%%-", beautiful.volume.channel))
             beautiful.volume.update()
-        end),        
-    -- awful.key({ }, "XF86AudioMute",
-    --     function ()
-    --         os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
-    --         beautiful.volume.update()
-    --     end),
+        end),
+        -- awful.key({ modkey1}, "F11",
+        -- function ()
+            -- os.execute(string.format("amixer -q set %s 5%%-", beautiful.volume.channel))
+            -- beautiful.volume.update()
+        -- end),        
+    awful.key({ }, "XF86AudioMute",
+        function ()
+            os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
+            beautiful.volume.update()
+        end),
         awful.key({ modkey1}, "F10",
         function ()
             os.execute(string.format("amixer -q set %s toggle", beautiful.volume.channel))
