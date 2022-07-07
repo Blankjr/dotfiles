@@ -694,28 +694,18 @@ globalkeys = my_table.join(
               {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control
-    -- awful.key({ modkey1 }, "Up",
     awful.key({ }, "XF86AudioRaiseVolume",
         function ()
             os.execute(string.format("amixer -q set %s 5%%+", beautiful.volume.channel))
             beautiful.volume.update()
         end),
-        -- awful.key({ modkey1}, "F12",
-        -- function ()
-        --     os.execute(string.format("amixer -q set %s 5%%+", beautiful.volume.channel))
-        --     beautiful.volume.update()
-        -- end),
-    -- awful.key({ modkey1 }, "Down",
+        
     awful.key({ }, "XF86AudioLowerVolume",
         function ()
             os.execute(string.format("amixer -q set %s 5%%-", beautiful.volume.channel))
             beautiful.volume.update()
         end),
-        -- awful.key({ modkey1}, "F11",
-        -- function ()
-            -- os.execute(string.format("amixer -q set %s 5%%-", beautiful.volume.channel))
-            -- beautiful.volume.update()
-        -- end),        
+
     awful.key({ }, "XF86AudioMute",
         function ()
             os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
