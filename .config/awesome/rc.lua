@@ -456,7 +456,11 @@ globalkeys = my_table.join(
         {description = "Xfce screenshot", group = "screenshots"}),
     awful.key({ modkey1, "Shift"  }, "Print", function() awful.util.spawn("flameshot gui") end,
         {description = "Flameshot screenshot", group = "screenshots"}),
-
+    -- 75% Keyboard  Screenshots
+    awful.key({ modkey1, "Shift"  }, "F12", function() awful.util.spawn("flameshot gui") end,
+        {description = "Flameshot screenshot", group = "screenshots"}),
+    awful.key({ modkey1  }, "F12", function() awful.util.spawn("xfce4-screenshooter") end,
+        {description = "Flameshot screenshot", group = "screenshots"}),
     -- Personal keybindings}}}
     -- Custom Keybindings ---------------------------------------------------------------------------------------------------
     -- Rofi Prompt
@@ -699,7 +703,7 @@ globalkeys = my_table.join(
             os.execute(string.format("amixer -q set %s 5%%+", beautiful.volume.channel))
             beautiful.volume.update()
         end),
-        
+
     awful.key({ }, "XF86AudioLowerVolume",
         function ()
             os.execute(string.format("amixer -q set %s 5%%-", beautiful.volume.channel))
