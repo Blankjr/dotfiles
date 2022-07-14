@@ -26,6 +26,7 @@ feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 run redshift
 run mullvad
 run copyq
+run setxkbmap eu  
 #run firefox
 #run atom
 #run dropbox
