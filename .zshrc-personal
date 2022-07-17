@@ -6,7 +6,7 @@ notflixpath='/home/christian/dev/python/web-scraping/media/'
 alias notflix='${notflixpath}venv/bin/python3.10 ${notflixpath}notflix.py'
 alias rm='rm -I --preserve-root'
 alias vim='nvim'
-alias v='nvim'
+alias v='lvim'
 #----Media-----------------------------------------------------
 alias i='nsxiv'
 alias icat='kitty +kitten icat'
