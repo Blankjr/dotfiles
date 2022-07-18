@@ -1,0 +1,4 @@
+#!/bin/bash
+serverlocations=("Movies" "Shows" "Deutsch/Filme" "Deutsch/Serien" "Anime" "backup")
+printf "%s\n" "${serverlocations[@]}"| rofi -dmenu |xargs -I {}  scp -r "$PWD/$1" pi@local.server:/home/pi/Videos/"{}"
+
