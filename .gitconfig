@@ -1,0 +1,7 @@
+[user]
+	name = Christian
+	email = blankj.me@gmail.com
+[core]
+	editor = lvim
+[push]
+	autoSetupRemote = true
