@@ -16,6 +16,8 @@ alias speedread='tspreed'
 alias smpv='mpv "$(ls | shuf | head -n 1)"'
 alias fmpv='mpv "$(fzf)"'
 #----Utilities-------------------------------------------------------
+# tealdeer
+alias fman='tldr'
 alias fzf-open=' (fzf --height 40% --reverse </dev/tty) | xargs -I {} xdg-open {}'
 alias la='exa --icons -a --group-directories-first'
 alias ll='exa --icons -lah --group-directories-first'
