@@ -39,6 +39,8 @@ alias c='clear'
 alias cd='z'
 alias zz='z -'
 alias pdftopng= 'pdftoppm -png'
+alias du='dust'
+alias df='duf'
 #-----Git-----------------------------------------------------------
 alias gts='git status'
 alias gta='git add'
