@@ -50,6 +50,7 @@ alias gtl='git log'
 alias f8='flake8'
 alias sc='shellcheck'
 alias code='rofi-code'
+alias live='alive-server .'
 #-----Python------------------------------------------------------
 alias pyae='deactivate &> /dev/null; source ./venv/bin/activate'
 alias pyde='deactivate'
