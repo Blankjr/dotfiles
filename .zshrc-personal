@@ -17,9 +17,11 @@ alias fmpv='mpv "$(fzf)"'
 #----Utilities-------------------------------------------------------
 # tealdeer
 alias fman='tldr'
-alias fzf-open=' (fzf --height 40% --reverse </dev/tty) | xargs -I {} xdg-open {}'
-alias fzfo=' fzf | xargs -I {} xdg-open {}'
-alias fo=' find . -maxdepth 1 -type f | fzf | xargs -I {} xdg-open {}'
+# fuzzy finding & open in default application
+alias fzf-open=' (fzf --height 40% --reverse </dev/tty) | (xargs -I {} xdg-open {} &)'
+alias fzfo=' fzf | (xargs -I {} xdg-open {} &)'
+# not recursive
+alias fo=' find . -maxdepth 1 -type f | fzf | (xargs -I {} xdg-open {} &)'
 alias la='exa --icons -a --group-directories-first'
 alias ll='exa --icons -lah --group-directories-first'
 alias ls='exa --icons --group-directories-first'
