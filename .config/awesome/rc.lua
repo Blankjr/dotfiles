@@ -116,8 +116,8 @@ local modkey1      = "Control"
 
 -- personal variables
 --change these variables if you want
-local browser1          = "chromium -no-default-browser-check"
-local browser2          = "firefox"
+local browser1          = "firefox-developer-edition"
+local browser2          = "chromium -no-default-browser-check"
 local browser3          = "brave"
 local editor            = os.getenv("EDITOR") or "nvim"
 local editorgui         = "codium"

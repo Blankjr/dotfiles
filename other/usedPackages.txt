@@ -21,9 +21,14 @@ spotify
 mullvad
 exa
 bat
-du
+dust
 duf
 github-cli
 shellcheck
+flake8
 firefox-developer-edition
 rofi
+zathura
+zathura-pdf-mupdf
+fzf
+ripgrep
