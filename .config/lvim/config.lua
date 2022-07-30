@@ -179,6 +179,7 @@ lvim.plugins = {
       vim.g.mkdp_auto_start = 1
     end,
   },
+  { "ekickx/clipboard-image.nvim" }, --requires xclip
 
 }
 
