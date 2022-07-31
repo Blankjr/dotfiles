@@ -12,6 +12,11 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "tokyonight"
+
+-- Spellchecking
+-- lvim.lang.Spellchecking = "en,de" -- maybe en_us,de-de
+-- vim.cmd(":set spelllang=en_us,de")
+vim.opt.spelllang = "en,de"
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
