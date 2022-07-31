@@ -1,0 +1,9 @@
+{
+  "author": {
+    "prefix": "author",
+    "body": [
+      "[ Author: ${1} ]${0}"
+    ],
+    "description": "Markdown Author Boilerplate"
+  }
+}
