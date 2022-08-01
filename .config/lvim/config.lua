@@ -189,7 +189,7 @@ lvim.plugins = {
     "max397574/better-escape.nvim",
     config = function()
       require("better_escape").setup {
-        mapping = { "jk", "jj", "kj" }, -- a table with mappings to use
+        mapping = { "jk", "jj" }, -- a table with mappings to use
       }
     end,
   }
