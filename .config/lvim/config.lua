@@ -12,7 +12,6 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save = true
 lvim.colorscheme = "tokyonight"
-
 -- Spellchecking
 -- lvim.lang.Spellchecking = "en,de" -- maybe en_us,de-de
 -- vim.cmd(":set spelllang=en_us,de")
@@ -25,6 +24,7 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- unmap a default keymapping
+vim.keymap.del("i", "kj") -- Better Escape doesnt handle kj delay input
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
@@ -185,7 +185,14 @@ lvim.plugins = {
     end,
   },
   { "ekickx/clipboard-image.nvim" }, --requires xclip
-
+  {
+    "max397574/better-escape.nvim",
+    config = function()
+      require("better_escape").setup {
+        mapping = { "jk", "jj", "kj" }, -- a table with mappings to use
+      }
+    end,
+  }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
