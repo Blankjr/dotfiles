@@ -199,7 +199,8 @@ lvim.plugins = {
         buttons = false,
       })
     end,
-  }
+  },
+  { "kdheepak/lazygit.nvim" }
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

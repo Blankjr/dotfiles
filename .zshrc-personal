@@ -51,6 +51,7 @@ alias gtc='git commit -m'
 alias gtd='git diff'
 alias gtp='git push -u origin HEAD'
 alias gtl='git log'
+alias gg='lazygit'
 #-----Dev-Tools-----------------------------------------------------
 alias f8='flake8'
 alias sc='shellcheck'
