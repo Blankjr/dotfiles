@@ -192,6 +192,13 @@ lvim.plugins = {
         mapping = { "jk", "jj" }, -- a table with mappings to use
       }
     end,
+  },
+  { "andweeb/presence.nvim",
+    config = function()
+      require("presence"):setup({
+        buttons = false,
+      })
+    end,
   }
 }
 
