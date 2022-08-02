@@ -46,6 +46,7 @@ alias df='duf'
 #-----Git-----------------------------------------------------------
 alias gts='git status'
 alias gta='git add'
+alias gtr='git reset'
 alias gtc='git commit -m'
 alias gtd='git diff'
 alias gtp='git push -u origin HEAD'
