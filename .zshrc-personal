@@ -43,6 +43,16 @@ alias zz='z -'
 alias pdftopng= 'pdftoppm -png'
 alias du='dust'
 alias df='duf'
+# sane default commands
+alias mkdir="mkdir -pv"
+#                   │└─ list created directories
+#                   └─ create intermediate directories
+alias mv="mv -iv"
+#             │└─ list moved files
+#             └─ prompt before overwriting an existing file
+alias cp="cp -iv"
+#             │└─ list copied files
+#             └─ prompt before overwriting an existing file
 #-----Git-----------------------------------------------------------
 alias gts='git status'
 alias gta='git add'
@@ -57,6 +67,10 @@ alias f8='flake8'
 alias sc='shellcheck'
 alias code='rofi-code'
 alias live='alive-server .'
+#-----Tools---------------------------------------------------------
+function myip { echo 'Your ip is:'; curl ipinfo.io/ip }
+function run { "${@}" < /dev/null &> /dev/null &; disown } # independent from shell
+alias mine='sudo chown -R $USER:$USER .'
 #-----Python------------------------------------------------------
 alias pyae='deactivate &> /dev/null; source ./venv/bin/activate'
 alias pyde='deactivate'
