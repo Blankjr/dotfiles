@@ -7,9 +7,9 @@ alias notflix='${notflixpath}venv/bin/python3.10 ${notflixpath}notflix.py'
 alias rm='rm -I --preserve-root'
 alias v='lvim'
 #----Media-----------------------------------------------------
-alias i='nsxiv -a' #autoplay gifs
+alias i='run nsxiv -a' #autoplay gifs, disown shell session
 alias icat='kitty +kitten icat'
-alias p='zathura'
+alias p='run zathura' #disown shell session
 alias speedread='tspreed'
 #MPV
 alias smpv='mpv "$(ls | shuf | head -n 1)"'
