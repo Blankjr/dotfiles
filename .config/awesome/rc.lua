@@ -508,7 +508,11 @@ globalkeys = my_table.join(
     awful.util.spawn("snippy.sh")
   end,
     { description = "Rofi Dynamic Snippets", group = "launcher" }),
-
+  -- Nvim notetaking
+  awful.key({ modkey }, "i", function()
+    awful.util.spawn("kitty --class notetaker_class notetaker") --set class for awesome floating rule
+  end,
+    { description = "Notetaker spawn", group = "launcher" }),
   -- Hotkeys Awesome
   -- Overwrite for Rofi Snippets
   awful.key({ modkey, "Shift" }, "s", hotkeys_popup.show_help,
@@ -1119,8 +1123,9 @@ awful.rules.rules = {
   { rule_any = {
     class = {
       "Polkit-gnome-authentication-agent-1",
-      "Arcolinux-calamares-tool.py",
-      "copyq"
+      "Arcolinux-calamares-tool.py", --notetaker lvim script
+      "copyq",
+      "notetaker_class"
     },
   },
     properties = { floating = true },
