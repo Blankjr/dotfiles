@@ -40,6 +40,9 @@ alias c='clear'
 # zoxide
 alias cd='z'
 alias zz='z -'
+# tmux
+# new session based on directory
+alias tn "tmux new -s (pwd | sed 's/.*\///g')"
 alias pdftopng= 'pdftoppm -png'
 alias du='dust'
 alias df='duf'
