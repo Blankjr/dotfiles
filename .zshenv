@@ -2,6 +2,8 @@ typeset -U path PATH
 path=(~/.local/bin $path)
 export PATH
 
+#fzf default settings
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 #DEFAULT Apps
 export EDITOR="nvim"
 export READER="zathura"
