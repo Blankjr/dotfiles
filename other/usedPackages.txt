@@ -1,3 +1,4 @@
+yay-bin
 tldr
 glow
 httpie
@@ -32,3 +33,4 @@ zathura
 zathura-pdf-mupdf
 fzf
 ripgrep
+(xournalpp)
