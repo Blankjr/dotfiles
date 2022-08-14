@@ -7,7 +7,10 @@ a global executable or a path to
 an executable
 ]]
 -- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
-
+-- Default neovim keymapping style
+local nvim_keymap = vim.api.nvim_set_keymap
+local options = { noremap = true, silent = true }
+nvim_keymap("v", "p", '"_dP', options) -- Visual select and past over wont replace the paste buffer with overwritten text
 -- general
 lvim.log.level = "warn"
 lvim.format_on_save = true
@@ -24,7 +27,7 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 -- unmap a default keymapping
-vim.keymap.del("i", "kj") -- Better Escape doesnt handle kj delay input
+lvim.keys.insert_mode["kj"] = false -- Better Escape doesnt handle kj delay input
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
 -- lvim.keys.normal_mode["<C-q>"] = ":q<cr>" -- or vim.keymap.set("n", "<C-q>", ":q<cr>" )
@@ -97,8 +100,8 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
 -- local opts = {} -- check the lspconfig documentation for a list of all possible options
 -- require("lvim.lsp.manager").setup("pyright", opts)
-require("lvim.lsp.manager").setup "tailwindcss"
-require("emmet").config()
+-- require("lvim.lsp.manager").setup "tailwindcss"
+-- require("emmet").config()
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
 -- ---`:LvimInfo` lists which server(s) are skiipped for the current filetype
 -- vim.tbl_map(function(server)
