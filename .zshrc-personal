@@ -95,6 +95,23 @@ add-zsh-hook chpwd python_venv
 python_venv
 eval "$(zoxide init zsh)"
 
+#----LF-File-Manager--------------------------------------------
+#lf cd into current directory
+# bindkey -s '^o' 'lfcd\n'  # zsh keybinding: ctrl+o
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}
+
 #replace agnoster zsh prompt username@machine
 prompt_context() {
    # Custom (Random emoji)
