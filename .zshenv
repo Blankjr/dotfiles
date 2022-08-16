@@ -1,4 +1,12 @@
 typeset -U path PATH
+
+export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+# Other XDG paths
+export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
+export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
+
 path=(~/.local/bin $path)
 export PATH
 
@@ -15,10 +23,6 @@ export IMAGE="nsxiv"
 export COLORTERM="truecolor"
 export OPENER="xdg-open"
 export PAGER="less"
-# Other XDG paths
-export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
-export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
-export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 
 # lf icons
 # export LF_ICONS="di=📁:\
@@ -27,7 +31,6 @@ export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 # ow=📂:\
 # ln=⛓:\
 # or=❌:\
-# ex=🎯:\
 # *.txt=✍:\
 # *.mom=✍:\
 # *.me=✍:\
@@ -35,9 +38,6 @@ export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 # *.png=🖼:\
 # *.webp=🖼:\
 # *.ico=🖼:\
-# *.jpg=📸:\
-# *.jpe=📸:\
-# *.jpeg=📸:\
 # *.gif=🖼:\
 # *.svg=🗺:\
 # *.tif=🖼:\
@@ -63,18 +63,6 @@ export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 # *.opus=🎵:\
 # *.ogg=🎵:\
 # *.m4a=🎵:\
-# *.flac=🎼:\
-# *.wav=🎼:\
-# *.mkv=🎥:\
-# *.mp4=🎥:\
-# *.webm=🎥:\
-# *.mpeg=🎥:\
-# *.avi=🎥:\
-# *.mov=🎥:\
-# *.mpg=🎥:\
-# *.wmv=🎥:\
-# *.m4b=🎥:\
-# *.flv=🎥:\
 # *.zip=📦:\
 # *.rar=📦:\
 # *.7z=📦:\
@@ -94,7 +82,6 @@ export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 # *.bib=🎓:\
 # *.ged=👪:\
 # *.part=💔:\
-# *.torrent=🔽:\
 # *.jar=♨:\
 # *.java=♨:\
 # "
