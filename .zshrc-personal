@@ -15,8 +15,10 @@ alias icat='kitty +kitten icat'
 alias p='run zathura' #disown shell session
 alias speedread='tspreed'
 #MPV
-alias smpv='mpv "$(ls | shuf | head -n 1)"'
+alias smpv='mpv "$(\ls | shuf | head -n 1)"'
 alias fmpv='mpv "$(fzf)"'
+#FFMPEG
+alias video-info= 'ffprobe -hide_banner -stats -i'
 #----Utilities-------------------------------------------------------
 # tealdeer
 alias fman='tldr'
