@@ -47,6 +47,9 @@ alias c='clear'
 # zoxide
 alias cd='z'
 alias zz='z -'
+# trash-cli 
+alias tra="trash"
+alias trar="trash-restore"
 # tmux
 # new session based on directory
 alias tn "tmux new -s (pwd | sed 's/.*\///g')"
@@ -77,6 +80,7 @@ alias f8='flake8'
 alias sc='shellcheck'
 alias code='rofi-code'
 alias live='alive-server .'
+alias sshpi='ssh pi@local.server'
 #-----Tools---------------------------------------------------------
 function myip { echo 'Your ip is:'; curl ipinfo.io/ip }
 function run { "${@}" < /dev/null &> /dev/null &; disown } # independent from shell
@@ -101,7 +105,7 @@ eval "$(zoxide init zsh)"
 
 #----LF-File-Manager--------------------------------------------
 #lf cd into current directory
-# bindkey -s '^o' 'lfcd\n'  # zsh keybinding: ctrl+o
+bindkey -s '^o' 'lfcd\n'  # zsh keybinding: ctrl+o
 lfcd () {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"

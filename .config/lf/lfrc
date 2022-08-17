@@ -20,3 +20,33 @@ cmd open ${{
         *) xdg-open "$f" ;;
     esac
 }}
+
+
+
+# Trash bindings
+cmd trash ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    file=${files%%;*}
+
+    trash-put "$(basename "$file")"
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+cmd restore_trash ${{
+  trash-restore
+}}
+
+map dd trash
+map dr restore_trash
+
+# Movement
+map gd cd ~/Documents/
+map gD cd ~/Downloads
+map gp cd ~/Pictures
+map gs cd ~/.dotfiles/.local/bin
