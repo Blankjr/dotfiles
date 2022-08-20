@@ -78,7 +78,7 @@ alias gg='lazygit'
 #-----Dev-Tools-----------------------------------------------------
 alias f8='flake8'
 alias sc='shellcheck'
-alias code='rofi-code'
+# alias code='rofi-code' -- vscodium-bin removed, TODO: write a script to open lvim workspaces in tmux
 alias live='alive-server .'
 alias sshpi='ssh pi@local.server'
 #-----Tools---------------------------------------------------------
