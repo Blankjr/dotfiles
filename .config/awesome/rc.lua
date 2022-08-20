@@ -112,7 +112,7 @@ beautiful.init(theme_path)
 -- modkey or mod4 = super key
 local modkey  = "Mod4"
 local altkey  = "Mod1"
-local modkey1 = "Control"
+local control = "Control"
 
 -- personal variables
 --change these variables if you want
@@ -318,9 +318,10 @@ globalkeys = my_table.join(
     { description = "show dmenu", group = "hotkeys" }),
 
   -- Function keys
-  -- awful.key({ }, "F12", function () awful.util.spawn( "xfce4-terminal --drop-down" ) end,
-  --     {description = "dropdown terminal" , group = "function keys"}),
-
+  -- awful.key({}, "F12", function() awful.util.spawn("xfce4-terminal --drop-down") end,
+  --   { description = "dropdown terminal", group = "function keys" }),
+  -- awful.key({modkey}, "F12", function() awful.util.spawn("xfce4-terminal --drop-down") end,
+  --   { description = "dropdown terminal", group = "function keys" }),
 
   -- super + ... function keys
   -- awful.key({ modkey }, "F1", function() awful.util.spawn(browser1) end,
@@ -374,7 +375,7 @@ globalkeys = my_table.join(
 
 
   -- ctrl + shift + ...
-  awful.key({ modkey1, "Shift" }, "Escape", function() awful.util.spawn("xfce4-taskmanager") end),
+  awful.key({ control, "Shift" }, "Escape", function() awful.util.spawn("xfce4-taskmanager") end),
 
 
   -- ctrl+alt +  ...
@@ -382,19 +383,19 @@ globalkeys = my_table.join(
   --   { description = "ArcoLinux Welcome App", group = "alt+ctrl" }),
   -- awful.key({ modkey1, altkey }, "e", function() awful.util.spawn("arcolinux-tweak-tool") end,
   --   { description = "ArcoLinux Tweak Tool", group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "Next", function() awful.util.spawn("conky-rotate -n") end,
+  awful.key({ control, altkey }, "Next", function() awful.util.spawn("conky-rotate -n") end,
     { description = "Next conky rotation", group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "Prior", function() awful.util.spawn("conky-rotate -p") end,
+  awful.key({ control, altkey }, "Prior", function() awful.util.spawn("conky-rotate -p") end,
     { description = "Previous conky rotation", group = "alt+ctrl" }),
   -- awful.key({ modkey1, altkey }, "a", function() awful.util.spawn("xfce4-appfinder") end,
   --   { description = "Xfce appfinder", group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "b", function() awful.util.spawn(filemanager) end,
+  awful.key({ control, altkey }, "b", function() awful.util.spawn(filemanager) end,
     { description = filemanager, group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "c", function() awful.util.spawn("catfish") end,
+  awful.key({ control, altkey }, "c", function() awful.util.spawn("catfish") end,
     { description = "catfish", group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "f", function() awful.util.spawn(browser2) end,
+  awful.key({ control, altkey }, "f", function() awful.util.spawn(browser2) end,
     { description = browser2, group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "g", function() awful.util.spawn(browser3) end,
+  awful.key({ control, altkey }, "g", function() awful.util.spawn(browser3) end,
     { description = browser3, group = "alt+ctrl" }),
   -- awful.key({ modkey1, altkey }, "i", function() awful.util.spawn("nitrogen") end,
   --   { description = nitrogen, group = "alt+ctrl" }),
@@ -402,22 +403,22 @@ globalkeys = my_table.join(
   --   { description = scrlocker, group = "alt+ctrl" }),
   -- awful.key({ modkey1, altkey }, "l", function() awful.util.spawn("arcolinux-logout") end,
   --   { description = scrlocker, group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "o",
+  awful.key({ control, altkey }, "o",
     function() awful.spawn.with_shell("$HOME/.config/awesome/scripts/picom-toggle.sh") end,
     { description = "Picom toggle", group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "s", function() awful.util.spawn(mediaplayer) end,
+  awful.key({ control, altkey }, "s", function() awful.util.spawn(mediaplayer) end,
     { description = mediaplayer, group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "t", function() awful.util.spawn(terminal) end,
+  awful.key({ control, altkey }, "t", function() awful.util.spawn(terminal) end,
     { description = terminal, group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "u", function() awful.util.spawn("pavucontrol") end,
+  awful.key({ control, altkey }, "u", function() awful.util.spawn("pavucontrol") end,
     { description = "pulseaudio control", group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "v", function() awful.util.spawn(browser1) end,
+  awful.key({ control, altkey }, "v", function() awful.util.spawn(browser1) end,
     { description = browser1, group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "Return", function() awful.util.spawn(terminal) end,
+  awful.key({ control, altkey }, "Return", function() awful.util.spawn(terminal) end,
     { description = terminal, group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "m", function() awful.util.spawn("xfce4-settings-manager") end,
+  awful.key({ control, altkey }, "m", function() awful.util.spawn("xfce4-settings-manager") end,
     { description = "Xfce settings manager", group = "alt+ctrl" }),
-  awful.key({ modkey1, altkey }, "p", function() awful.util.spawn("pamac-manager") end,
+  awful.key({ control, altkey }, "p", function() awful.util.spawn("pamac-manager") end,
     { description = "Pamac Manager", group = "alt+ctrl" }),
 
   -- alt + ...
@@ -464,14 +465,14 @@ globalkeys = my_table.join(
     function() awful.util.spawn("scrot 'Arc-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'") end
     ,
     { description = "Scrot", group = "screenshots" }),
-  awful.key({ modkey1 }, "Print", function() awful.util.spawn("xfce4-screenshooter") end,
+  awful.key({ control }, "Print", function() awful.util.spawn("xfce4-screenshooter") end,
     { description = "Xfce screenshot", group = "screenshots" }),
-  awful.key({ modkey1, "Shift" }, "Print", function() awful.util.spawn("flameshot gui") end,
+  awful.key({ control, "Shift" }, "Print", function() awful.util.spawn("flameshot gui") end,
     { description = "Flameshot screenshot", group = "screenshots" }),
   -- 75% Keyboard  Screenshots
-  awful.key({ modkey1, "Shift" }, "F12", function() awful.util.spawn("flameshot gui") end,
+  awful.key({ control, "Shift" }, "F12", function() awful.util.spawn("flameshot gui") end,
     { description = "Flameshot screenshot", group = "screenshots" }),
-  awful.key({ modkey1 }, "F12",
+  awful.key({ control }, "F12",
     function() awful.util.spawn("scrot 'Arc-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/scr/full'") end,
     { description = "Flameshot screenshot", group = "screenshots" }),
   -- Personal keybindings}}}
@@ -494,7 +495,7 @@ globalkeys = my_table.join(
     awful.util.spawn("firefox-developer-edition")
   end,
     { description = "Open Firefox Dev", group = "launcher" }),
-  awful.key({ modkey, modkey1 }, "b", function()
+  awful.key({ modkey, control }, "b", function()
     awful.util.spawn("librewolf")
   end,
     { description = "Open Librewolf", group = "launcher" }),
@@ -513,6 +514,11 @@ globalkeys = my_table.join(
     awful.util.spawn("kitty --class notetaker_class notetaker") --set class for awesome floating rule
   end,
     { description = "Notetaker spawn", group = "launcher" }),
+  --- Color picker
+  awful.key({ modkey, control }, "c", function()
+    awful.spawn.easy_async_with_shell("xcolor-pick", function() end)
+  end, { description = "open color picker", group = "hotkeys" }),
+
   -- Hotkeys Awesome
   -- Overwrite for Rofi Snippets
   awful.key({ modkey, "Shift" }, "s", hotkeys_popup.show_help,
@@ -587,25 +593,25 @@ globalkeys = my_table.join(
 
 
   -- By direction client focus with arrows
-  awful.key({ modkey1, modkey }, "Down",
+  awful.key({ control, modkey }, "Down",
     function()
       awful.client.focus.global_bydirection("down")
       if client.focus then client.focus:raise() end
     end,
     { description = "focus down", group = "client" }),
-  awful.key({ modkey1, modkey }, "Up",
+  awful.key({ control, modkey }, "Up",
     function()
       awful.client.focus.global_bydirection("up")
       if client.focus then client.focus:raise() end
     end,
     { description = "focus up", group = "client" }),
-  awful.key({ modkey1, modkey }, "Left",
+  awful.key({ control, modkey }, "Left",
     function()
       awful.client.focus.global_bydirection("left")
       if client.focus then client.focus:raise() end
     end,
     { description = "focus left", group = "client" }),
-  awful.key({ modkey1, modkey }, "Right",
+  awful.key({ control, modkey }, "Right",
     function()
       awful.client.focus.global_bydirection("right")
       if client.focus then client.focus:raise() end
@@ -624,7 +630,7 @@ globalkeys = my_table.join(
     { description = "focus the previous screen", group = "screen" }),
   awful.key({ modkey, }, "u", awful.client.urgent.jumpto,
     { description = "jump to urgent client", group = "client" }),
-  awful.key({ modkey1, }, "Tab",
+  awful.key({ control, }, "Tab",
     function()
       awful.client.focus.history.previous()
       if client.focus then
@@ -742,17 +748,17 @@ globalkeys = my_table.join(
       os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
       beautiful.volume.update()
     end),
-  awful.key({ modkey1 }, "F10",
+  awful.key({ control }, "F10",
     function()
       os.execute(string.format("amixer -q set %s toggle", beautiful.volume.channel))
       beautiful.volume.update()
     end),
-  awful.key({ modkey1, "Shift" }, "m",
+  awful.key({ control, "Shift" }, "m",
     function()
       os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
       beautiful.volume.update()
     end),
-  awful.key({ modkey1, "Shift" }, "0",
+  awful.key({ control, "Shift" }, "0",
     function()
       os.execute(string.format("amixer -q set %s 0%%", beautiful.volume.channel))
       beautiful.volume.update()
