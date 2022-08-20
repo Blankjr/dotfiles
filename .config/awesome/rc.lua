@@ -980,7 +980,8 @@ awful.rules.rules = {
   -- Set applications to always map on the tag 2 on screen 1.
   --{ rule = { class = "Subl" },
   --properties = { screen = 1, tag = awful.util.tagnames[2], switchtotag = true  } },
-
+  { rule_any = { class = { "Spotify", "discord" } },
+    properties = { screen = 1, tag = awful.util.tagnames[9], switchtotag = true } },
 
   -- Set applications to always map on the tag 1 on screen 1.
   -- find class or role via xprop command
@@ -1123,9 +1124,9 @@ awful.rules.rules = {
   { rule_any = {
     class = {
       "Polkit-gnome-authentication-agent-1",
-      "Arcolinux-calamares-tool.py", --notetaker lvim script
+      "Arcolinux-calamares-tool.py",
       "copyq",
-      "notetaker_class"
+      "notetaker_class" --notetaker lvim script
     },
   },
     properties = { floating = true },

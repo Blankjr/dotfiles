@@ -85,6 +85,7 @@ alias sshpi='ssh pi@local.server'
 function myip { echo 'Your ip is:'; curl ipinfo.io/ip }
 function run { "${@}" < /dev/null &> /dev/null &; disown } # independent from shell
 alias mine='sudo chown -R $USER:$USER .'
+alias window-wmchecker='xprop WM_CLASS WM_NAME'
 #-----Python------------------------------------------------------
 alias pyae='deactivate &> /dev/null; source ./venv/bin/activate'
 alias pyde='deactivate'
