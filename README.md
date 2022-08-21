@@ -8,6 +8,7 @@
 - Launcher: Rofi
 - Terminal: Kitty
   - Font: JetBrains Mono Nerd Font
+  - Theme: XCodeDark (with custom cursor)
 - OS: Arch Linux
 - Code Editor: Neovim ~~& VSCodium~~
     - Theme: Tokyo Night
@@ -17,23 +18,21 @@
 - Document Viewer: Zathura
 - Browser
   - Librewolf
+    - Theme: beautifulFire anime
   - Firefox Developer Edition
+    - Theme: Catppuccin-dark-peach
   - Chromium
 - File Manager
-  - Thunar
+  - lf & Thunar
 - Rest Client: Insomnia
 
-## Themes & Fonts
-
-- Kitty: XCode Dark
+## Globals
 - GTK2/3 :
   - Arc-Dark
   - Icons: Sardi Arc
   - Mouse Cursor: Bibata-Modern-Ice
-- Firefox Developer Edition
-  - Catppuccin-dark-peach
-- Librewolf
-  - beautifulFire anime
+  
+  
 <details>
 <summary><samp><b>Archived</b></samp></summary>
 <h2> Screenshot (Old)</h2>
