@@ -499,11 +499,11 @@ globalkeys = my_table.join(
     awful.util.spawn("librewolf")
   end,
     { description = "Open Librewolf", group = "launcher" }),
-  -- Project Select VS-Codium
-  awful.key({ modkey }, "p", function()
-    awful.util.spawn("rofi-code")
-  end,
-    { description = "Rofi VS-Codium Workspace", group = "launcher" }),
+  -- Project Select VS-Codium TODO: Replace with tmux vim script
+  -- awful.key({ modkey }, "p", function()
+  --   awful.util.spawn("rofi-code")
+  -- end,
+  --   { description = "Rofi VS-Codium Workspace", group = "launcher" }),
   -- Rofi Snippets
   awful.key({ modkey }, "s", function()
     awful.util.spawn("snippy.sh")
@@ -986,9 +986,13 @@ awful.rules.rules = {
   -- Set applications to always map on the tag 2 on screen 1.
   --{ rule = { class = "Subl" },
   --properties = { screen = 1, tag = awful.util.tagnames[2], switchtotag = true  } },
-  { rule_any = { class = { "Spotify", "discord" } },
+  { rule = { class = "discord" },
     properties = { screen = 1, tag = awful.util.tagnames[9], switchtotag = true } },
 
+  { rule = { class = "spotify" }, -- Spotify sets (new) class name after start
+    properties = { screen = 1, tag = awful.util.tagnames[9], switchtotag = true } },
+  { rule = { class = "Spotify" }, -- Spotify sets (new) class name after start
+    properties = { screen = 1, tag = awful.util.tagnames[9], switchtotag = true } },
   -- Set applications to always map on the tag 1 on screen 1.
   -- find class or role via xprop command
   --{ rule = { class = browser2 },
