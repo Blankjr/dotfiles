@@ -42,7 +42,40 @@ require("awful.hotkeys_popup.keys")
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi      = require("beautiful.xresources").apply_dpi
 -- }}}
+-- Scratchpads, signals, wallpaper
+local bling    = require("bling")
 
+-- Global Vars
+screen_width = awful.screen.focused().geometry.width
+screen_height = awful.screen.focused().geometry.height
+
+local discord_scratch = bling.module.scratchpad:new {
+  command = "discord",
+  rule = {
+    class = "discord"
+  },
+  sticky = false,
+  autoclose = false,
+  floating = true,
+  geometry = { x = screen_width / 2 - dpi(1000), y = screen_height / 2 - dpi(450) + dpi(21), --+ beautiful.wibar_height,
+    height = dpi(850), width = dpi(2000) },
+  reapply = true,
+  --rubato = chat_anim
+}
+-- awesome.connect_signal("scratch::chat", function() discord_scratch:toggle() end)
+local terminal_scratch = bling.module.scratchpad:new {
+  command = "kitty --class scratchpad",
+  rule = {
+    class = "scratchpad"
+  },
+  sticky = false,
+  autoclose = false,
+  floating = true,
+  geometry = { x = screen_width / 2 - dpi(1000), y = screen_height / 2 - dpi(450) + dpi(21), --+ beautiful.wibar_height,
+    height = dpi(850), width = dpi(2000) },
+  reapply = true,
+  --rubato = chat_anim
+}
 
 
 -- {{{ Error handling
@@ -318,10 +351,12 @@ globalkeys = my_table.join(
     { description = "show dmenu", group = "hotkeys" }),
 
   -- Function keys
-  -- awful.key({}, "F12", function() awful.util.spawn("xfce4-terminal --drop-down") end,
-  --   { description = "dropdown terminal", group = "function keys" }),
-  -- awful.key({modkey}, "F12", function() awful.util.spawn("xfce4-terminal --drop-down") end,
-  --   { description = "dropdown terminal", group = "function keys" }),
+
+  awful.key({ modkey }, "F12", function() terminal_scratch:toggle() end,
+    { description = "Terminal Scratch", group = "function keys" }),
+
+  awful.key({ modkey }, "F11", function() discord_scratch:toggle() end,
+    { description = "Discord", group = "function keys" }),
 
   -- super + ... function keys
   -- awful.key({ modkey }, "F1", function() awful.util.spawn(browser1) end,
@@ -986,13 +1021,13 @@ awful.rules.rules = {
   -- Set applications to always map on the tag 2 on screen 1.
   --{ rule = { class = "Subl" },
   --properties = { screen = 1, tag = awful.util.tagnames[2], switchtotag = true  } },
-  { rule = { class = "discord" },
-    properties = { screen = 1, tag = awful.util.tagnames[9], switchtotag = true } },
+  -- { rule = { class = "discord" },
+  --   properties = { screen = 1, tag = awful.util.tagnames[9], switchtotag = true } },
 
-  { rule = { class = "spotify" }, -- Spotify sets (new) class name after start
-    properties = { screen = 1, tag = awful.util.tagnames[9], switchtotag = true } },
-  { rule = { class = "Spotify" }, -- Spotify sets (new) class name after start
-    properties = { screen = 1, tag = awful.util.tagnames[9], switchtotag = true } },
+  -- { rule = { class = "spotify" }, -- Spotify sets (new) class name after start
+  --   properties = { screen = 1, tag = awful.util.tagnames[9], switchtotag = true } },
+  -- { rule = { class = "Spotify" }, -- Spotify sets (new) class name after start
+  --   properties = { screen = 1, tag = awful.util.tagnames[9], switchtotag = true } },
   -- Set applications to always map on the tag 1 on screen 1.
   -- find class or role via xprop command
   --{ rule = { class = browser2 },
