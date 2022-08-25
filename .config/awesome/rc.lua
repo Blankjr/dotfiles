@@ -45,6 +45,15 @@ local dpi      = require("beautiful.xresources").apply_dpi
 -- Scratchpads, signals, wallpaper
 local bling    = require("bling")
 
+-- A default Awesome wallpaper
+bling.module.wallpaper.setup {
+  set_function = bling.module.wallpaper.setters.random,
+  screen = screen, -- The awesome 'screen' variable is an array of all screen objects
+  wallpaper = "/home/christian/Pictures/walls/anime/12.png",
+  position = "maximized"
+  -- wallpaper = {os.getenv("HOME") .. "/Pictures/wallpapers/"},
+}
+
 -- Global Vars
 screen_width = awful.screen.focused().geometry.width
 screen_height = awful.screen.focused().geometry.height
@@ -1151,8 +1160,8 @@ awful.rules.rules = {
       "Wpa_gui",
       "pinentry",
       "veromix",
-      "xtightvncviewer",
-      "Xfce4-terminal" },
+      "xtightvncviewer"
+    },
 
     name = {
       "Event Tester", -- xev.
