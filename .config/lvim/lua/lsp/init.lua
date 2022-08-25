@@ -1,3 +1,8 @@
+-- emmet_ls
+-- require("lsp.emmet")
+
+-- tailwindcss (disabled for now )
+-- require("lsp.tailwindcss")
 -- generic LSP settings
 
 -- ---@usage disable automatic installation of servers
@@ -10,7 +15,7 @@
 -- require("lvim.lsp.manager").setup("pyright", opts)
 -- require("lvim.lsp.manager").setup "tailwindcss"
 -- require("lvim.lsp.manager").setup("emmet_ls")
-require("emmet").config()
+-- require("emmet").config()
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
 -- ---`:LvimInfo` lists which server(s) are skiipped for the current filetype
 -- vim.tbl_map(function(server)

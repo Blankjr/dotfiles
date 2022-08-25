@@ -1,6 +1,6 @@
 {
   "name": "nvim-snippets",
-  "author": "authorname",
+  "author": "Blankjr",
   "engines": {
     "vscode": "^1.11.0"
   },
@@ -9,6 +9,10 @@
       {
         "language": "markdown",
         "path": "./markdown.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "./ts-react.json"
       }
     ]
   }
