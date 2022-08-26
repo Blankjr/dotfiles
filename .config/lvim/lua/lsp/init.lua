@@ -14,6 +14,9 @@
 -- local opts = {} -- check the lspconfig documentation for a list of all possible options
 -- require("lvim.lsp.manager").setup("pyright", opts)
 -- require("lvim.lsp.manager").setup "tailwindcss"
+require("lvim.lsp.manager").setup("tailwindcss", {
+  filetypes = { "html", "vue", "typescriptreact", "javascriptreact" }
+})
 -- require("lvim.lsp.manager").setup("emmet_ls")
 -- require("emmet").config()
 -- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!

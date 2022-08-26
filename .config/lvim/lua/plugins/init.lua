@@ -5,12 +5,12 @@ lvim.plugins = {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
-  -- {
-  --   "windwp/nvim-ts-autotag",
-  --   config = function()
-  --     require("nvim-ts-autotag").setup()
-  --   end,
-  -- },
+  {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
   {
     "norcalli/nvim-colorizer.lua",
     config = function()
@@ -49,5 +49,8 @@ lvim.plugins = {
       })
     end,
   },
-  { "kdheepak/lazygit.nvim" }
+  { "kdheepak/lazygit.nvim" },
+  -- Tailwind CSS
+  -- { "williamboman/manson.nvim" },
+  -- { "williamboman/mason-lspconfig.nvim" }
 }
