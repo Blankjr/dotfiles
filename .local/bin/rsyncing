@@ -1,0 +1,15 @@
+#!/bin/sh
+# Disclaimer: This is not a real backup solution. It just copies current version of the folders to a remote machine
+
+# -u: skip files that are newer/same on receiver 
+# -v: verbose
+# -P: Partial File on receiver
+# -r: recursive
+# --delete-after: Request that the file-deletions on the receiving side be done after the transfer has completed.
+# Wallpaper
+rsync -uvrP ~/Pictures/walls/ pi@local.server:/home/pi/backup/PC/Pictures/walls/
+# Documents
+rsync -uvrP ~/Documents/ pi@local.server:/home/pi/backup/PC/Documents/
+# Music
+rsync -uvrP ~/Music/ pi@local.server:/home/pi/backup/PC/Music/
+
