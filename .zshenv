@@ -17,7 +17,9 @@ export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
 export MYSQL_HISTFILE="$XDG_DATA_HOME"/mysql_history
 
 
-path=(~/.local/bin $path)
+# path=(~/.local/bin $path)
+path=(~/.local/bin $GOPATH/bin $path)
+
 export PATH
 
 #fzf default settings
