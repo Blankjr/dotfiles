@@ -25,7 +25,7 @@ export PATH
 #fzf default settings
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 #zoxide settings
-export _ZO_EXLUDE_DIRS='$HOME:$HOME/.mo/*'
+export _ZO_EXLUDE_DIRS='$HOME:$HOME/Videos/.mo/*'
 
 #DEFAULT Apps
 export EDITOR="nvim"
