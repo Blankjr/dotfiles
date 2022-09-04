@@ -47,11 +47,18 @@ local bling    = require("bling")
 
 -- A default Awesome wallpaper
 bling.module.wallpaper.setup {
-  set_function = bling.module.wallpaper.setters.random,
+  set_function = bling.module.wallpaper.setters.simple_schedule,
+  image_formats = { "jpg", "jpeg", "png", "bmp" }, -- when searching in folder, consider these files only
+  wallpaper = {
+    ["09:00:00"] = "/home/christian/Pictures/walls/focus/",
+    ["18:00:00"] = "/home/christian/Pictures/walls/anime/favorites/",
+  },
+  schedule_set_function = bling.module.wallpaper.setters.random,
+  position = "maximized",
+  -- recursive = false,
+  change_timer = 3600, -- each hour
   screen = screen, -- The awesome 'screen' variable is an array of all screen objects
-  wallpaper = "/home/christian/Pictures/walls/anime/12.png",
-  position = "maximized"
-  -- wallpaper = {os.getenv("HOME") .. "/Pictures/wallpapers/"},
+  recursive = true,
 }
 
 -- Global Vars
@@ -171,6 +178,7 @@ local virtualmachine = "virtualbox"
 
 -- awesome variables
 awful.util.terminal = terminal
+-- awful.util.tagnames = { "web", "", "", "➍", "➎", "➏", "➐", "➑", "➒" }
 awful.util.tagnames = { "➊", "➋", "➌", "➍", "➎", "➏", "➐", "➑", "➒" }
 --awful.util.tagnames = { "⠐", "⠡", "⠲", "⠵", "⠻", "⠿" }
 --awful.util.tagnames = { "⌘", "♐", "⌥", "ℵ" }
@@ -470,33 +478,32 @@ globalkeys = my_table.join(
   --   function() awful.spawn.with_shell("variety -t  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&") end
   --   ,
   --   { description = "Pywal Wallpaper trash", group = "altkey" }),
-  awful.key({ altkey, "Shift" }, "n",
-    function() awful.spawn.with_shell("variety -n  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&") end
-    ,
-    { description = "Pywal Wallpaper next", group = "altkey" }),
-  awful.key({ altkey, "Shift" }, "u",
-    function() awful.spawn.with_shell("wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&") end,
-    { description = "Pywal Wallpaper update", group = "altkey" }),
-  awful.key({ altkey, "Shift" }, "p",
-    function() awful.spawn.with_shell("variety -p  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&") end
-    ,
-    { description = "Pywal Wallpaper previous", group = "altkey" }),
+  -- awful.key({ altkey, "Shift" }, "n",
+  --   function() awful.spawn.with_shell("variety -n  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&") end
+  --   ,
+  --   { description = "Pywal Wallpaper next", group = "altkey" }),
+  -- awful.key({ altkey, "Shift" }, "u",
+  --   function() awful.spawn.with_shell("wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&") end,
+  --   { description = "Pywal Wallpaper update", group = "altkey" }),
+  -- awful.key({ altkey, "Shift" }, "p",
+  --   function() awful.spawn.with_shell("variety -p  && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&") end,
+  --   { description = "Pywal Wallpaper previous", group = "altkey" }),
   -- awful.key({ altkey }, "t", function() awful.util.spawn("variety -t") end,
   --   { description = "Wallpaper trash", group = "altkey" }),
-  awful.key({ altkey }, "n", function() awful.util.spawn("variety -n") end,
-    { description = "Wallpaper next", group = "altkey" }),
-  awful.key({ altkey }, "p", function() awful.util.spawn("variety -p") end,
-    { description = "Wallpaper previous", group = "altkey" }),
-  awful.key({ altkey }, "f", function() awful.util.spawn("variety -f") end,
-    { description = "Wallpaper favorite", group = "altkey" }),
+  -- awful.key({ altkey }, "n", function() awful.util.spawn("variety -n") end,
+  --   { description = "Wallpaper next", group = "altkey" }),
+  -- awful.key({ altkey }, "p", function() awful.util.spawn("variety -p") end,
+  --   { description = "Wallpaper previous", group = "altkey" }),
+  -- awful.key({ altkey }, "f", function() awful.util.spawn("variety -f") end,
+  --   { description = "Wallpaper favorite", group = "altkey" }),
   -- awful.key({ altkey }, "Left", function () awful.util.spawn( "variety -p" ) end,
   --     {description = "Wallpaper previous", group = "altkey"}),
   -- awful.key({ altkey }, "Right", function () awful.util.spawn( "variety -n" ) end,
   --     {description = "Wallpaper next", group = "altkey"}),
-  awful.key({ altkey }, "Up", function() awful.util.spawn("variety --pause") end,
-    { description = "Wallpaper pause", group = "altkey" }),
-  awful.key({ altkey }, "Down", function() awful.util.spawn("variety --resume") end,
-    { description = "Wallpaper resume", group = "altkey" }),
+  -- awful.key({ altkey }, "Up", function() awful.util.spawn("variety --pause") end,
+  --   { description = "Wallpaper pause", group = "altkey" }),
+  -- awful.key({ altkey }, "Down", function() awful.util.spawn("variety --resume") end,
+  --   { description = "Wallpaper resume", group = "altkey" }),
   -- awful.key({ altkey }, "F2", function() awful.util.spawn("xfce4-appfinder --collapsed") end,
   --   { description = "Xfce appfinder", group = "altkey" }),
   -- awful.key({ altkey }, "F3", function() awful.util.spawn("xfce4-appfinder") end,
