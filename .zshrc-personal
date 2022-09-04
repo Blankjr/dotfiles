@@ -11,6 +11,15 @@ notflixpath='/home/christian/dev/python/web-scraping/media/'
 alias notflix='${notflixpath}venv/bin/python3.10 ${notflixpath}notflix.py'
 alias rm='rm -I --preserve-root'
 alias v='lvim'
+#----Taskwarrior-----------------------------------------------------
+alias tui='taskwarrior-tui'
+alias ta='task add' # tags: +uni ; +priv or +work
+alias tan='task add scheduled:eod' #end of day
+alias tl='task list'
+alias tm='task modify'
+alias td='task done' #completed
+alias t-='task delete' #removed
+alias tw1="task modify wait:1d" #hide for 1 day
 #----Media-----------------------------------------------------
 alias i='run nsxiv -a' #autoplay gifs, disown shell session
 alias icat='kitty +kitten icat'

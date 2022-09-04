@@ -19,6 +19,8 @@
 
 # To use the default location of the XDG directories,
 # move this configuration file from ~/.taskrc to ~/.config/task/taskrc and uncomment below
+#--------Date-Format------------------------------------
+dateformat=D.M.Y
 
 #data.location=~/.local/share/task
 data.location=~/vaults/tasks
