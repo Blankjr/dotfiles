@@ -73,8 +73,8 @@ local discord_scratch = bling.module.scratchpad:new {
   sticky = false,
   autoclose = false,
   floating = true,
-  geometry = { x = screen_width / 2 - dpi(1000), y = screen_height / 2 - dpi(450) + dpi(21), --+ beautiful.wibar_height,
-    height = dpi(850), width = dpi(2000) },
+  geometry = { x = screen_width / 2 - dpi(1000), y = screen_height / 2 - dpi(450) + dpi(21), --+ beautiful.wibar_height
+    height = dpi(900), width = dpi(2000) }, -- The geometry in a floating state
   reapply = true,
   --rubato = chat_anim
 }
@@ -87,8 +87,8 @@ local terminal_scratch = bling.module.scratchpad:new {
   sticky = false,
   autoclose = false,
   floating = true,
-  geometry = { x = screen_width / 2 - dpi(1000), y = screen_height / 2 - dpi(450) + dpi(21), --+ beautiful.wibar_height,
-    height = dpi(850), width = dpi(2000) },
+  geometry = { x = screen_width / 2 - dpi(1000), y = screen_height / 2 - dpi(450) + dpi(21), --+ beautiful.wibar_height
+    height = dpi(900), width = dpi(2000) },
   reapply = true,
   --rubato = chat_anim
 }
