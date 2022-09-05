@@ -53,7 +53,7 @@ bling.module.wallpaper.setup {
     ["09:00:00"] = "/home/christian/Pictures/walls/focus/",
     ["18:00:00"] = "/home/christian/Pictures/walls/anime/favorites/",
   },
-  schedule_set_function = bling.module.wallpaper.setters.random,
+  schedule_set_function = bling.module.wallpaper.setters.simple,
   position = "maximized",
   -- recursive = false,
   change_timer = 3600, -- each hour
