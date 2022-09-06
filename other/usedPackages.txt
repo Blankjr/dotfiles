@@ -1,4 +1,5 @@
-yay-bin
+(yay-bin)
+gcalcli
 copyq
 lf
 ctpv-git

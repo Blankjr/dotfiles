@@ -20,6 +20,9 @@ alias tm='task modify'
 alias td='task done' #completed
 alias t-='task delete' #removed
 alias tw1="task modify wait:1d" #hide for 1 day
+#----gcalcli-----------------------------------------------------
+alias gcal='gcalcli'
+alias gcalw='gcalcli calw'
 #----Media-----------------------------------------------------
 alias i='run nsxiv -a' #autoplay gifs, disown shell session
 alias icat='kitty +kitten icat'
@@ -137,4 +140,5 @@ prompt_context() {
   RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
   prompt_segment black default "${emojis[$RAND_EMOJI_N]} "
 }
-bunnyfetch
+# bunnyfetch
+# eval "$(starship init zsh)"
