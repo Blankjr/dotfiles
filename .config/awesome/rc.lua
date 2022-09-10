@@ -50,12 +50,11 @@ bling.module.wallpaper.setup {
   set_function = bling.module.wallpaper.setters.simple_schedule,
   image_formats = { "jpg", "jpeg", "png", "bmp" }, -- when searching in folder, consider these files only
   wallpaper = {
-    ["09:00:00"] = "/home/christian/Pictures/walls/focus/",
-    ["18:00:00"] = "/home/christian/Pictures/walls/anime/favorites/",
+    ["07:00:00"] = "/home/christian/Pictures/walls/focus/minimal-montain-logo.jpg",
+    ["18:00:00"] = "/home/christian/Pictures/walls/focus/green.jpg",
   },
   schedule_set_function = bling.module.wallpaper.setters.simple,
   position = "maximized",
-  -- recursive = false,
   change_timer = 3600, -- each hour
   screen = screen, -- The awesome 'screen' variable is an array of all screen objects
   recursive = true,

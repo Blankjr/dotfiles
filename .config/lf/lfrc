@@ -42,6 +42,8 @@ cmd restore_trash ${{
   trash-restore
 }}
 
+
+map d # remove vi like delete
 map dd trash
 map dr restore_trash
 
