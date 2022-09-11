@@ -34,6 +34,7 @@ alias fmpv='mpv "$(fzf)"'
 #FFMPEG
 alias video-info= 'ffprobe -hide_banner -stats -i'
 #----Utilities-------------------------------------------------------
+alias tma='tmux attach'
 # tealdeer
 alias fman='tldr'
 # fuzzy finding & open in default application
