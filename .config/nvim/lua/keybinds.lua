@@ -6,6 +6,8 @@ keymap('v', '<leader>yy', '+yy', {})
 local opts = { noremap = true }
 -- Fast Escape insert mode
 keymap('i', 'jj', '<ESC>', {})
+-- Mouse
+vim.cmd[[set mouse+=a]]
 -- Move between splits with CTRL + hjkl
 keymap('n', '<c-j>', '<c-w>j', opts)
 keymap('n', '<c-h>', '<c-w>h', opts)
