@@ -4,12 +4,12 @@ return {
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-buffer',
-     --   'saadparwaiz1/cmp_luasnip',
-     --   'L3MON4D3/LuaSnip',
-        --'f3fora/cmp-spell'
+        'saadparwaiz1/cmp_luasnip',
+        'L3MON4D3/LuaSnip',
+        'f3fora/cmp-spell'
     },
     config = function()
-      --  local luasnip = require("luasnip")
+        local luasnip = require("luasnip")
         local cmp = require("cmp")
         cmp.setup({
             snippet = {
@@ -38,8 +38,8 @@ return {
             }),
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
-              --  { name = 'luasnip' },
-                --      { name = 'spell' }
+                { name = 'luasnip' },
+                { name = 'spell' }
             })
         })
     end

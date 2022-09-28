@@ -1,6 +1,6 @@
 -- Plugin Management
 --local lspconfig = require "plugins.confs.lspconfs"
---local cmp = require "plugins.confs.cmp"
+local cmp = require "plugins.confs.cmp"
 
 require('packer').startup(function(use)
   -- Packer can manage itself
@@ -10,6 +10,7 @@ require('packer').startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
+  use(cmp)
   -- use { "catppuccin/nvim", as = "catppuccin" }
   use "EdenEast/nightfox.nvim"
   use { "kdheepak/lazygit.nvim" }
