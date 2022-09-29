@@ -58,12 +58,16 @@ require("packer").startup(function(use)
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
 	})
-	use{
+	use({
 		"kyazdani42/nvim-tree.lua",
 		requires = {
 			"kyazdani42/nvim-web-devicons", -- optional, for file icons
 		},
-	}
+	})
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "kyazdani42/nvim-web-devicons", opt = true },
+	})
 end)
 -- Theme Setup
 -- vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
@@ -97,6 +101,9 @@ require("null-ls").setup({
 	},
 })
 
-
 -- empty setup using defaults
 require("nvim-tree").setup()
+-- Comment
+require("Comment").setup()
+-- Statusline
+require('lualine').setup()
