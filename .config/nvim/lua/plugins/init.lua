@@ -58,6 +58,12 @@ require("packer").startup(function(use)
 		"jose-elias-alvarez/null-ls.nvim",
 		requires = { "nvim-lua/plenary.nvim" },
 	})
+	use{
+		"kyazdani42/nvim-tree.lua",
+		requires = {
+			"kyazdani42/nvim-web-devicons", -- optional, for file icons
+		},
+	}
 end)
 -- Theme Setup
 -- vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
@@ -68,7 +74,7 @@ require("gitsigns").setup()
 --use(lspconfig)
 -- Use an on_attach function to only map the following keys
 on_attach = function(client)
-    client.resolved_capabilities.document_formatting = false
+	client.resolved_capabilities.document_formatting = false
 end
 --require'lspconfig'.bashls.setup{}
 local lsp_flags = {
@@ -90,3 +96,7 @@ require("null-ls").setup({
 		require("null-ls").builtins.completion.spell,
 	},
 })
+
+
+-- empty setup using defaults
+require("nvim-tree").setup()
