@@ -43,54 +43,54 @@ local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 local dpi      = require("beautiful.xresources").apply_dpi
 -- }}}
 -- Scratchpads, signals, wallpaper
-local bling    = require("bling")
+--local bling    = require("bling")
 
 -- A default Awesome wallpaper
-bling.module.wallpaper.setup {
-  set_function = bling.module.wallpaper.setters.simple_schedule,
-  image_formats = { "jpg", "jpeg", "png", "bmp" }, -- when searching in folder, consider these files only
-  wallpaper = {
-    ["07:00:00"] = "/home/christian/Pictures/walls/focus/minimal-montain-logo.jpg",
-    ["18:00:00"] = "/home/christian/Pictures/walls/focus/green.jpg",
-  },
-  schedule_set_function = bling.module.wallpaper.setters.simple,
-  position = "maximized",
-  change_timer = 3600, -- each hour
-  screen = screen, -- The awesome 'screen' variable is an array of all screen objects
-  recursive = true,
-}
+--bling.module.wallpaper.setup {
+--  set_function = bling.module.wallpaper.setters.simple_schedule,
+--  image_formats = { "jpg", "jpeg", "png", "bmp" }, -- when searching in folder, consider these files only
+--  wallpaper = {
+ --   ["07:00:00"] = "/home/christian/Pictures/walls/focus/minimal-montain-logo.jpg",
+--    ["18:00:00"] = "/home/christian/Pictures/walls/focus/green.jpg",
+--  },
+--  schedule_set_function = bling.module.wallpaper.setters.simple,
+--  position = "maximized",
+--  change_timer = 3600, -- each hour
+--  screen = screen, -- The awesome 'screen' variable is an array of all screen objects
+--  recursive = true,
+--}
 
 -- Global Vars
-screen_width = awful.screen.focused().geometry.width
-screen_height = awful.screen.focused().geometry.height
+--screen_width = awful.screen.focused().geometry.width
+--screen_height = awful.screen.focused().geometry.height
 
-local discord_scratch = bling.module.scratchpad:new {
-  command = "discord",
-  rule = {
-    class = "discord"
-  },
-  sticky = false,
-  autoclose = false,
-  floating = true,
-  geometry = { x = screen_width / 2 - dpi(1000), y = screen_height / 2 - dpi(450) + dpi(21), --+ beautiful.wibar_height
-    height = dpi(900), width = dpi(2000) }, -- The geometry in a floating state
-  reapply = true,
+--local discord_scratch = bling.module.scratchpad:new {
+--  command = "discord",
+--  rule = {
+--    class = "discord"
+--  },
+--  sticky = false,
+--  autoclose = false,
+--  floating = true,
+--  geometry = { x = screen_width / 2 - dpi(1000), y = screen_height / 2 - dpi(450) + dpi(21), --+ beautiful.wibar_height
+--    height = dpi(900), width = dpi(2000) }, -- The geometry in a floating state
+--  reapply = true,
   --rubato = chat_anim
-}
+--}
 -- awesome.connect_signal("scratch::chat", function() discord_scratch:toggle() end)
-local terminal_scratch = bling.module.scratchpad:new {
-  command = "kitty --class scratchpad",
-  rule = {
-    class = "scratchpad"
-  },
-  sticky = false,
-  autoclose = false,
-  floating = true,
-  geometry = { x = screen_width / 2 - dpi(1000), y = screen_height / 2 - dpi(450) + dpi(21), --+ beautiful.wibar_height
-    height = dpi(900), width = dpi(2000) },
-  reapply = true,
+--local terminal_scratch = bling.module.scratchpad:new {
+--  command = "kitty --class scratchpad",
+--  rule = {
+--    class = "scratchpad"
+--  },
+--  sticky = false,
+--  autoclose = false,
+--  floating = true,
+--  geometry = { x = screen_width / 2 - dpi(1000), y = screen_height / 2 - dpi(450) + dpi(21), --+ beautiful.wibar_height
+--    height = dpi(900), width = dpi(2000) },
+--  reapply = true,
   --rubato = chat_anim
-}
+--}
 
 
 -- {{{ Error handling

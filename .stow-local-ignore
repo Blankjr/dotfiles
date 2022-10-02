@@ -37,3 +37,12 @@ nightTab.json
 .config/mpv.conf
 .config/rofi
 .Xresources
+# for Nixos
+.zshenv
+.zprofile
+.profile
+.bashrc
+.gitconfig
+.xsession
+.zshrc-personal
+.gitmodules
