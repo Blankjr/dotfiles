@@ -1,0 +1,15 @@
+[submodule ".config/awesome/plugins/rubato"]
+	path = .config/awesome/plugins/rubato
+	url = https://github.com/andOrlando/rubato
+[submodule ".config/awesome/plugins/uPower"]
+	path = .config/awesome/plugins/uPower
+	url = https://github.com/Aire-One/awesome-battery_widget
+[submodule ".config/awesome/plugins/json"]
+	path = .config/awesome/plugins/json
+	url = https://github.com/rxi/json.lua
+[submodule ".config/awesome/plugins/bling"]
+	path = .config/awesome/plugins/bling
+	url = https://github.com/BlingCorp/bling
+[submodule ".config/awesome/plugins/awesome-widgets"]
+	path = .config/awesome/plugins/awesome-widgets
+	url = https://github.com/andOrlando/awesome-widgets
