@@ -16,7 +16,7 @@ local function init (modkey)
 	end)
 	client.connect_signal("request::default_keybindings", function()
 		awful.keyboard.append_client_keybindings({
-			awful.key({ modkey,           }, "f",
+			awful.key({ modkey }, "f",
 				function (c)
 					c.fullscreen = not c.fullscreen
 					c:raise()
@@ -34,7 +34,7 @@ local function init (modkey)
 				function(c)
 					c.maximized = not c.maximized
 				end),
-			awful.key({ modkey, "Shift"   }, "q",      function (c) c:kill() end,
+			awful.key({ modkey  }, "q",      function (c) c:kill() end,
 				{description = "close", group = "client"}),
 			awful.key({ modkey, "Shift" }, "space",  awful.client.floating.toggle,
 				{description = "toggle floating", group = "client"}),

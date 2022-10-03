@@ -4,7 +4,9 @@ local gears	= require ("gears")
 local configdir	= gears.filesystem.get_configuration_dir()
 local terminal = "kitty"
 local filemanager = "pcmanfm"
-local modkey = "Mod1"
+local modkey = "Mod4"
+local altkey = "Mod1"
+local control = "Control"
 
 local launcher = require ("ui.launcher")
 
@@ -15,7 +17,7 @@ awful.keyboard.append_global_keybindings({
 		{description = "reload awesome", group = "awesome"}),
 	awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
 		{description = "open a terminal", group = "launcher"}),
-    awful.key({ modkey }, "d", function() launcher.open() end,
+    awful.key({ modkey }, "space", function() launcher.open() end,
 		{description = "App launcher", group = "launcher"}),
 
 	--awful.key({ modkey }, "d", function() awful.spawn("rofi -show combi -combi-modi drun,run") end,
@@ -124,17 +126,17 @@ awful.keyboard.append_global_keybindings({
 	awful.key({},	"XF86AudioNext", function() awful.spawn.with_shell("playerctl -p spotify,ncspot next") end),
 })
 
-local tabbed = require "plugins.bling.module.tabbed"
+-- local tabbed = require "plugins.bling.module.tabbed"
 
-awful.keyboard.append_global_keybindings({
-    awful.key({modkey},   "t", function ()
-        local c = client.focus
-        if c and c.bling_tabbed then
-            tabbed.remove(c)
-        else
-            tabbed.init(c)
-        end
-        --tabbed.init(client.focus)
-    end),
-    awful.key({modkey},   "a", function () tabbed.pick() end)
-})
+-- awful.keyboard.append_global_keybindings({
+--     awful.key({modkey},   "t", function ()
+--         local c = client.focus
+--         if c and c.bling_tabbed then
+--             tabbed.remove(c)
+--         else
+--             tabbed.init(c)
+--         end
+--         --tabbed.init(client.focus)
+--     end),
+--     awful.key({modkey},   "a", function () tabbed.pick() end)
+-- })
