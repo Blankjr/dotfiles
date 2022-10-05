@@ -138,4 +138,5 @@ awful.spawn("nm-applet")
 awful.spawn("xfce4-clipman")
 awful.spawn("redshift -O 4600K -P")
 awful.spawn("picom --config " .. gears.filesystem.get_configuration_dir() .. "/configs/picom.conf")
+awful.spawn("setxkbmap eu")
 -- }}}

@@ -37,7 +37,19 @@ awful.keyboard.append_global_keybindings({
 		end,
 		{description = "focus away from master", group = "client"}),
 })
-
+-- Focus related keybindings
+awful.keyboard.append_global_keybindings({
+	awful.key({ modkey,           }, "k",
+		function ()
+			awful.client.focus.byidx(-1)
+		end,
+		{description = "focus in direction of master", group = "client"}),
+	awful.key({ modkey,           }, "j",
+		function ()
+			awful.client.focus.byidx( 1)
+		end,
+		{description = "focus away from master", group = "client"}),
+})
 -- Layout related keybindings
 awful.keyboard.append_global_keybindings({
 	awful.key({ modkey, "Shift"   }, "Down", function () awful.client.swap.byidx(  1) end,
