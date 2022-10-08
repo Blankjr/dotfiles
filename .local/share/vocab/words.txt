@@ -18,3 +18,6 @@ coddle -> taking good care of someone
 phony -> poser
 upstart -> person of humble origin who attains sudden wealth
 distinguished -> characterized by excellence
+Anthropomorphism -> attribution of human traits, emotions, or intentions to non-human entitities
+converge -> to move toward one point and join together
+diverge -> to split and move out in different directions
