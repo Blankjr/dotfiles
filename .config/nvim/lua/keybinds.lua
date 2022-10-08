@@ -31,6 +31,6 @@ keymap("n", "<leader>fh", ":Telescope help_tags<CR>", {})
 --
 --
 -- Null LS Format
-keymap("n", "<leader>bf", ":lua vim.lsp.buf.formatting()<CR>", {})
+keymap("n", "<leader>bf", ":lua vim.lsp.buf.format{ async = true}<CR>", {})
 -- Nvim Tree (File Explorer)
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", {})
