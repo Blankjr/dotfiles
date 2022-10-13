@@ -68,6 +68,14 @@ require("packer").startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
+	use{
+		"andweeb/presence.nvim",
+		config = function()
+			require("presence"):setup({
+				buttons = false,
+			})
+		end,
+	}
 end)
 -- Theme Setup
 -- vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
@@ -92,6 +100,11 @@ require("lspconfig")["tsserver"].setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
 })
+require("lspconfig").tailwindcss.setup({
+	on_attach = on_attach,
+	flags = lsp_flags,
+	filetypes = { "html", "vue", "typescriptreact", "javascriptreact" }
+})
 require("null-ls").setup({
 	sources = {
 		require("null-ls").builtins.formatting.stylua,
@@ -106,4 +119,4 @@ require("nvim-tree").setup()
 -- Comment
 require("Comment").setup()
 -- Statusline
-require('lualine').setup()
+require("lualine").setup()
