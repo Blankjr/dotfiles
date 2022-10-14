@@ -20,6 +20,12 @@ awful.keyboard.append_global_keybindings({
     awful.key({ modkey }, "space", function() launcher.open() end,
 		{description = "App launcher", group = "launcher"}),
 
+    awful.key({ modkey }, "b", function() awful.spawn("firefox-devedition") end,
+		{description = "App launcher", group = "launcher"}),
+    awful.key({ modkey }, "f", function() awful.spawn("pcmanfm") end,
+		{description = "App launcher", group = "launcher"}),
+    awful.key({ modkey }, "e", function() awful.spawn("thunderbird") end,
+		{description = "App launcher", group = "launcher"}),
 	--awful.key({ modkey }, "d", function() awful.spawn("rofi -show combi -combi-modi drun,run") end,
 	--	{description = "rofi", group = "launcher"}),
 })
@@ -122,7 +128,8 @@ awful.keyboard.append_global_keybindings({
 -- Program shortcuts
 awful.keyboard.append_global_keybindings({
 	awful.key({ modkey }, "F3", function() awful.spawn.with_shell(filemanager) end),
-	awful.key({}	, "Print", function() awful.spawn.with_shell(configdir .. "scripts/scrot") end),
+	-- awful.key({}	, "Print", function() awful.spawn.with_shell(configdir .. "scripts/scrot") end),
+	awful.key({}	, "Print", function() awful.spawn("flameshot gui") end),
 	awful.key({modkey}, "Print", function() awful.spawn.with_shell(configdir .. "scripts/areascrot") end),
 })
 
