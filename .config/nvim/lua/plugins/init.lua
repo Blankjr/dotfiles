@@ -20,7 +20,6 @@ require("packer").startup(function(use)
 		"lewis6991/gitsigns.nvim",
 		-- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
 	})
-	use("andweeb/presence.nvim")
 	use({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.0",
@@ -68,14 +67,16 @@ require("packer").startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
-	use{
+	use({
 		"andweeb/presence.nvim",
 		config = function()
 			require("presence"):setup({
 				buttons = false,
 			})
 		end,
-	}
+	})
+	-- use({ "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" })
+	use("rafamadriz/friendly-snippets")
 end)
 -- Theme Setup
 -- vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
@@ -103,7 +104,7 @@ require("lspconfig")["tsserver"].setup({
 require("lspconfig").tailwindcss.setup({
 	on_attach = on_attach,
 	flags = lsp_flags,
-	filetypes = { "html", "vue", "typescriptreact", "javascriptreact" }
+	filetypes = { "html", "vue", "typescriptreact", "javascriptreact" },
 })
 require("null-ls").setup({
 	sources = {
@@ -120,3 +121,5 @@ require("nvim-tree").setup()
 require("Comment").setup()
 -- Statusline
 require("lualine").setup()
+-- Luasnip
+require("luasnip.loaders.from_vscode").lazy_load()
