@@ -20,7 +20,12 @@ keymap("n", "<leader>ff", ":Telescope find_files<CR>", {})
 keymap("n", "<leader>fg", ":Telescope live_grep<CR>", {})
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", {})
 keymap("n", "<leader>fh", ":Telescope help_tags<CR>", {})
-
+-- Neoclip (Telescope Clipboard)
+keymap(
+  "n",
+  "<leader>p",
+  ":lua require('telescope').extensions.neoclip.default()<CR>",
+  { noremap = true, silent = true })
 --local util = require 'vim.lsp.util'
 --local formatting_callback = function(client, bufnr)
 --  vim.keymap.set('n', '<leader>bf', function()

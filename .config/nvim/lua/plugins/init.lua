@@ -75,7 +75,8 @@ require("packer").startup(function(use)
 		"andweeb/presence.nvim",
 		config = function()
 			require("presence"):setup({
-				buttons = false,
+	-- vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+			buttons = false,
 			})
 		end,
 	})
@@ -85,7 +86,7 @@ require("packer").startup(function(use)
 		"AckslD/nvim-neoclip.lua",
 		requires = {
 			-- you'll need at least one of these
-			-- {'nvim-telescope/telescope.nvim'},
+			{'nvim-telescope/telescope.nvim'},
 			-- {'ibhagwan/fzf-lua'},
 		},
 		config = function()
