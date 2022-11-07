@@ -6,8 +6,10 @@ return {
         'hrsh7th/cmp-buffer',
         'saadparwaiz1/cmp_luasnip',
         'L3MON4D3/LuaSnip',
-        'f3fora/cmp-spell'
+        -- 'f3fora/cmp-spell'
+	'rafamadriz/friendly-snippets',
     },
+    -- require("luasnip.loaders.from_vscode").lazy_load()
     config = function()
         local luasnip = require("luasnip")
         local cmp = require("cmp")
@@ -37,9 +39,9 @@ return {
                 ['<CR>'] = cmp.mapping.confirm({ select = false }),
             }),
             sources = cmp.config.sources({
-                { name = 'nvim_lsp' },
                 { name = 'luasnip' },
-                { name = 'spell' }
+                { name = 'nvim_lsp' },
+                -- { name = 'spell' }
             })
         })
     end
