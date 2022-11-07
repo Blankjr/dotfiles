@@ -25,6 +25,10 @@ require("packer").startup(function(use)
 		tag = "0.1.0",
 		-- or                            , branch = '0.1.x',
 		requires = { { "nvim-lua/plenary.nvim" } },
+		require('telescope').setup{
+		defaults = {
+			file_ignore_patterns = { "node_modules", "venv" },
+		}}
 	})
 	use({
 		"max397574/better-escape.nvim",
@@ -77,6 +81,17 @@ require("packer").startup(function(use)
 	})
 	-- use({ "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" })
 	use("rafamadriz/friendly-snippets")
+	use({
+		"AckslD/nvim-neoclip.lua",
+		requires = {
+			-- you'll need at least one of these
+			-- {'nvim-telescope/telescope.nvim'},
+			-- {'ibhagwan/fzf-lua'},
+		},
+		config = function()
+			require("neoclip").setup()
+		end,
+	})
 end)
 -- Theme Setup
 -- vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
