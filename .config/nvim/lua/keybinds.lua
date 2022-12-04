@@ -2,7 +2,7 @@ local keymap = vim.api.nvim_set_keymap
 -- Save
 keymap("n", "<c-s>", ":w<CR>", {})
 keymap("i", "<c-s>", "<ESC>:w<CR>a", {})
-keymap("v", "<leader>yy", "+yy", {})
+-- keymap("v", "<leader>yy", "+yy", {})
 local opts = { noremap = true }
 -- Fast Escape insert mode
 keymap("i", "jj", "<ESC>", {})
@@ -23,7 +23,7 @@ keymap("n", "<leader>fh", ":Telescope help_tags<CR>", {})
 -- Neoclip (Telescope Clipboard)
 keymap(
   "n",
-  "<leader>p",
+  "<leader>c",
   ":lua require('telescope').extensions.neoclip.default()<CR>",
   { noremap = true, silent = true })
 --local util = require 'vim.lsp.util'
@@ -39,3 +39,21 @@ keymap(
 keymap("n", "<leader>bf", ":lua vim.lsp.buf.format{ async = true}<CR>", {})
 -- Nvim Tree (File Explorer)
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", {})
+-- LSP related
+-- Lspsaga
+--Map("n", "gr", "<cmd>Lspsaga rename <CR>", _)
+
+--Interact with system clipboard
+--maybe * instead of + is better, need to test
+keymap("n", "<leader>y", '"+yy', {})
+keymap("n", "<leader>y", '"+yy', {})
+keymap("v", "<leader>y", '"+y', {})
+keymap("v", "<leader>y", '"+y', {})
+
+keymap("n", "<leader>p", '"+p', {})
+keymap("v", "<leader>p", '"+p', {})
+
+-- keymap("n", "<leader>P", '"+P', {})
+-- keymap("v", "<leader>P", '"+P', {})
+-- keymap("v", "<leader>Y", '"+y$', {})
+

@@ -65,7 +65,7 @@ alias tra="trash"
 alias trar="trash-restore"
 # tmux
 # new session based on directory
-alias tn "tmux new -s (pwd | sed 's/.*\///g')"
+alias tn="tmux new -s (pwd | sed 's/.*\///g')"
 alias pdftopng= 'pdftoppm -png'
 alias du='dust'
 alias df='duf'
@@ -143,3 +143,7 @@ prompt_context() {
 }
 # bunnyfetch
 # eval "$(starship init zsh)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
