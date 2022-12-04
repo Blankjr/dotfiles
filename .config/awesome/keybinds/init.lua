@@ -20,12 +20,8 @@ awful.keyboard.append_global_keybindings({
     awful.key({ modkey }, "space", function() launcher.open() end,
 		{description = "App launcher", group = "launcher"}),
 
-    awful.key({ modkey }, "b", function() awful.spawn("firefox-devedition") end,
-		{description = "App launcher", group = "launcher"}),
-    awful.key({ modkey }, "f", function() awful.spawn("pcmanfm") end,
-		{description = "App launcher", group = "launcher"}),
-    awful.key({ modkey }, "e", function() awful.spawn("thunderbird") end,
-		{description = "App launcher", group = "launcher"}),
+    awful.key({ modkey }, "b", function() awful.spawn.with_shell("firefox-devedition") end,
+		{description = "Firefox Dev", group = "launcher"}),
 	--awful.key({ modkey }, "d", function() awful.spawn("rofi -show combi -combi-modi drun,run") end,
 	--	{description = "rofi", group = "launcher"}),
 })
@@ -43,7 +39,7 @@ awful.keyboard.append_global_keybindings({
 		end,
 		{description = "focus away from master", group = "client"}),
 })
--- Focus related keybindings
+-- Focus related keybindings (vim movement)
 awful.keyboard.append_global_keybindings({
 	awful.key({ modkey,           }, "k",
 		function ()
@@ -128,8 +124,7 @@ awful.keyboard.append_global_keybindings({
 -- Program shortcuts
 awful.keyboard.append_global_keybindings({
 	awful.key({ modkey }, "F3", function() awful.spawn.with_shell(filemanager) end),
-	-- awful.key({}	, "Print", function() awful.spawn.with_shell(configdir .. "scripts/scrot") end),
-	awful.key({}	, "Print", function() awful.spawn("flameshot gui") end),
+	awful.key({}	, "Print", function() awful.spawn.with_shell(configdir .. "scripts/scrot") end),
 	awful.key({modkey}, "Print", function() awful.spawn.with_shell(configdir .. "scripts/areascrot") end),
 })
 
@@ -144,18 +139,3 @@ awful.keyboard.append_global_keybindings({
 	awful.key({},	"XF86AudioPrev", function() awful.spawn.with_shell("playerctl -p spotify,ncspot previous") end),
 	awful.key({},	"XF86AudioNext", function() awful.spawn.with_shell("playerctl -p spotify,ncspot next") end),
 })
-
--- local tabbed = require "plugins.bling.module.tabbed"
-
--- awful.keyboard.append_global_keybindings({
---     awful.key({modkey},   "t", function ()
---         local c = client.focus
---         if c and c.bling_tabbed then
---             tabbed.remove(c)
---         else
---             tabbed.init(c)
---         end
---         --tabbed.init(client.focus)
---     end),
---     awful.key({modkey},   "a", function () tabbed.pick() end)
--- })

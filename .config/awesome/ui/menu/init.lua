@@ -5,12 +5,11 @@ local beautiful = require "beautiful"
 local rubato = require "plugins.rubato"
 
 --local playerwidget = require "ui.menu.widgets.playerctl"
-local playerwidget = require "ui.menu.widgets.mpd"
+--local playerwidget = require "ui.menu.widgets.mpd"
 
 local calendar = require "ui.menu.widgets.calendar"
 local layouts = require "ui.menu.widgets.layout"
 local powerbuttons = require "ui.menu.widgets.powerbuttons"
---ocal notifications = require "bar.widgets.not_center"
 local grindtimer = require "ui.menu.widgets.grinder"
 
 local layout = wibox.widget {
@@ -29,7 +28,6 @@ layout:add_widget_at(calendar, 2, 3, 3, 3)
 layout:add_widget_at(layouts, 2, 1, 1, 2)
 layout:add_widget_at(powerbuttons.widget, 1, 4, 1, 2)
 layout:add_widget_at(grindtimer,3,1,2,2)
---layout:add_widget_at(notifications, 5, 1, 5, 5)
 
 local function init(s)
 	s.menu = wibox {
@@ -43,14 +41,14 @@ local function init(s)
 		bg = beautiful.bg_normal,
 --		border_width = beautiful.border_width,
 --		border_color = beautiful.bg_focus,
-		shape = beautiful.theme_shape,
+--		shape = beautiful.theme_shape,
 		widget = wibox.widget {
 			widget = wibox.container.margin,
 			margins = dpi(5),
 			layout
 		}
 	}
-	layout:add_widget_at(playerwidget.create(s.center), 1, 1, 1, 3)
+--	layout:add_widget_at(playerwidget.create(s.center), 1, 1, 1, 3)
     --[[s.menu.flyin = rubato.timed {
         rate = 60,
         duration = 0.3,

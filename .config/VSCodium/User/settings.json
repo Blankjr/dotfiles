@@ -2,7 +2,6 @@
     "workbench.iconTheme": "eq-material-theme-icons",
     "editor.formatOnPaste": true,
     "javascript.validate.enable": false,
-    "window.zoomLevel": 2,
     "editor.wordWrap": "on",
     "html.format.wrapLineLength": 0,
     "cSpell.language": ",de,en,en-GB",

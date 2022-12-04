@@ -7,6 +7,8 @@ local ruled = require("ruled")
 local wibox = require("wibox")
 require("awful.autofocus")
 
+awful.spawn("autorandr -c")
+
 local dpi	= beautiful.xresources.apply_dpi
 
 awesome.set_preferred_icon_size(128)
@@ -21,10 +23,10 @@ end)
 
 tag.connect_signal("request::default_layouts", function()
     awful.layout.append_default_layouts({
+        awful.layout.suit.corner.nw,
         awful.layout.suit.tile,
         awful.layout.suit.floating,
         awful.layout.suit.spiral,
-        awful.layout.suit.corner.nw,
     })
 end)
 
@@ -34,28 +36,11 @@ end)
 
 beautiful.init( gears.filesystem.get_configuration_dir() .. "theme.lua")
 
---globals for Orlando widgets
+--globals for andOrlando widgets
 RUBATO_DIR = "plugins.rubato."
+
 require ("keybinds")
 require ("ui")
-
-
--- {{{ Wallpaper
-screen.connect_signal("request::wallpaper", function(s)
-	awful.wallpaper {
-		screen = s,
-		widget = {
-			image		= beautiful.wallpaper,
-			widget		= wibox.widget.imagebox,
-			resize		= true,
-			scaling_quality	= 'best',
-			horizontal_fit_policy='fit'
-		}
-	}
-	--gears.wallpaper.maximized(beautiful.wallpaper, s)
-end)
--- }}}
-
 
 -- client management {{{
 client.connect_signal("mouse::enter", function(c)
@@ -68,22 +53,12 @@ client.connect_signal("request::manage", function(c)
 		awful.placement.centered(c)
 		c:raise()
 	else c:to_secondary_section() end
-	c.shape = c.fullscreen and gears.shape.rectangle or beautiful.theme_shape
     c:activate{raise = true}
     if not c.requests_no_titlebar then c:emit_signal("request::titlebars", c) end
 end)
 
-client.connect_signal("property::fullscreen", function(c)
-	c.shape = c.fullscreen and gears.shape.rectangle or beautiful.theme_shape
-end)
---}}}
-
 -- rules {{{
 ruled.client.connect_signal("request::rules", function()
-	--ruled.client.append_rule {
-	--	rule_any   = { type = { "normal", "dialog" } },
-	--	properties = { titlebars_enabled = not requests_no_titlebar },
-	--}
 	ruled.client.append_rule {
 		rule = {},
 		except_any = { type = { "normal", "dialog" } },
@@ -91,7 +66,7 @@ ruled.client.connect_signal("request::rules", function()
 	}
 	ruled.client.append_rule {
 		rule_any = {
-			class = { "Thunar", "Pcmanfm", "Galculator" }
+			class = { "Thunar", "Pcmanfm", "Galculator", "Nemo" }
 		},
 		properties = {
 			floating= true,
@@ -99,23 +74,6 @@ ruled.client.connect_signal("request::rules", function()
 			height	= dpi(480)
 		},
 	}
-    ruled.client.append_rule{
-        rule_any = {
-            class = { "cavaonstart" },
-        },
-        properties = {
-            floating = true,
-            screen = awful.screen.preferred,
-            immobilized_horizontal = true,
-            immobilized_vertical = true,
-            width = 640,
-            height = 480,
-            focusable = false,
-            x = 455,
-            y = 50,
-            sticky = true
-        }
-    }
 end)
 --}}}
 

@@ -61,10 +61,11 @@ theme.fg_dark       = dark_theme
             and col_shift(theme.fg_normal, -20)
             or col_shift(theme.fg_normal, 20)
 
---theme.bg_systray    = theme.bg_normal
-theme.systray_icon_spacing = theme.useless_gap
+theme.useless_gap = dpi(5)
 
-theme.border_width        = dpi(3)
+theme.systray_icon_spacing = dpi(8)
+
+theme.border_width        = 0
 theme.border_color_urgent = theme.bg_urgent
 theme.border_color_normal = theme.bg_normal
 theme.border_color_new = theme.border_color_normal
@@ -104,49 +105,26 @@ theme.menu_submenu_icon = function ()
     return icon
 end
 
-theme.useless_gap = dpi(5)
+theme.master_width_factor = 0.65
 
-theme.rounded_rect = function(cr,w,h)
-    return gears.shape.rounded_rect(cr,w,h,5)
+theme.menu_item_spacing = dpi(5)
+
+theme.theme_shape = function (c, w, h)
+	return gears.shape.rounded_rect(c, w, h, 5)
 end
-theme.theme_shape = theme.rounded_rect
 theme.notification_shape = theme.shape
 
 theme.tabbed_spawn_in_tab = true  -- whether a new client should spawn into the focused tabbing container
 
--- For tabbar in general
-theme.tabbar_ontop  = false
-theme.tabbar_radius = 5                -- border radius of the tabbar
-theme.tabbar_style = "modern"         -- style of the tabbar ("default", "boxes" or "modern")
-theme.tabbar_font = theme.font .. " 10"          -- font of the tabbar
-theme.tabbar_size = theme.wibar_height                 -- size of the tabbar
-theme.tabbar_position = "top"          -- position of the tabbar
-
-theme.tabbar_bg_normal = theme.bg_focus_dark     -- background color of the focused client on the tabbar
-theme.tabbar_fg_normal = theme.fg_normal     -- foreground color of the focused client on the tabbar
-theme.tabbar_bg_focus  = theme.bg_normal     -- background color of unfocused clients on the tabbar
-theme.tabbar_fg_focus  = theme.fg_normal     -- foreground color of unfocused clients on the tabbar
-
-theme.tabbar_bg_normal_inactive = theme.tabbar_bg_normal  -- background color of unfocused clients on the tabbar when inactive
-theme.tabbar_fg_normal_inactive = theme.tabbar_fg_normal  -- foreground color of unfocused clients on the tabbar when inactive
-theme.tabbar_bg_focus_inactive = theme.tabbar_bg_focus   -- background color of the focused client on the tabbar when inactive
-theme.tabbar_fg_focus_inactive = theme.tabbar_fg_focus   -- foreground color of the focused client on the tabbar when inactive
-theme.tabbar_disable = false           -- disable the tab bar entirely
-
--- the following variables are currently only for the "modern" tabbar style
-theme.tabbar_color_close = theme.red -- changes the color of the close button
-theme.tabbar_color_min   = theme.yellow -- changes the color of the minimize button
-theme.tabbar_color_float = theme.blue -- changes the color of the float button
-
-
 -- some length parameters
-theme.wibar_height  = dpi(30)
+theme.wibar_height  = dpi(40)
+theme.titlebar_height = dpi(30)
 
 -- You can use your own layout icons like this:
-theme.layout_floating  = themes_path.."default/layouts/floating.png"
-theme.layout_tile = themes_path.."default/layouts/tile.png"
-theme.layout_spiral  = themes_path.."default/layouts/spiral.png"
-theme.layout_cornernw = themes_path.."default/layouts/cornernw.png"
+theme.layout_floating  = themes_path.."sky/layouts/floating.png"
+theme.layout_tile = themes_path.."sky/layouts/tile.png"
+theme.layout_spiral  = themes_path.."sky/layouts/spiral.png"
+theme.layout_cornernw = themes_path.."sky/layouts/cornernw.png"
 
 theme = beautiful.theme_assets.recolor_layout(theme, theme.fg_normal)
 -- Generate Awesome icon:
