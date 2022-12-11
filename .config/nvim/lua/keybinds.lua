@@ -56,4 +56,3 @@ keymap("v", "<leader>p", '"+p', {})
 -- keymap("n", "<leader>P", '"+P', {})
 -- keymap("v", "<leader>P", '"+P', {})
 -- keymap("v", "<leader>Y", '"+y$', {})
-

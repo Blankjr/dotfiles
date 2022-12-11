@@ -105,6 +105,8 @@ require("packer").startup(function(use)
 			})
 		end,
 	})
+	-- Markdown Preview (Github Style)
+	use("davidgranstrom/nvim-markdown-preview")
 end)
 -- Theme Setup
 -- vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
