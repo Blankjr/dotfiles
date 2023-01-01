@@ -82,7 +82,8 @@ require("packer").startup(function(use)
 		end,
 	})
 	-- use({ "L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*" })
-	use("rafamadriz/friendly-snippets")
+	-- TOD
+	-- use("rafamadriz/friendly-snippets")
 	use({
 		"AckslD/nvim-neoclip.lua",
 		requires = {
@@ -152,4 +153,4 @@ require("Comment").setup()
 -- Statusline
 require("lualine").setup()
 -- Luasnip
-require("luasnip.loaders.from_vscode").lazy_load()
+-- require("luasnip.loaders.from_vscode").lazy_load(paths = { "~/.dotfiles/.config/nvim/lua/plugins/confs/my-snippets" })

@@ -1,0 +1,38 @@
+{
+  "Main Function": {
+    "prefix": "main",
+    "body": [
+      "def main():",
+      "  ${1:pass}",
+      "if __name__ == \"__main__\":",
+      "  main()"
+    ],
+    "description": "Main Function"
+  },
+  "try/except/finally": {
+    "prefix": "try/except/finally",
+    "body": [
+      "try:",
+      "\t${1:pass}",
+      "except ${2:expression} as ${3:identifier}:",
+      "\t${4:pass}",
+      "finally:",
+      "\t${5:pass}"
+    ],
+    "description": "Code snippet for a try/except/finally statement"
+  },
+  "try/except/else/finally": {
+    "prefix": "try/except/else/finally",
+    "body": [
+      "try:",
+      "\t${1:pass}",
+      "except ${2:expression} as ${3:identifier}:",
+      "\t${4:pass}",
+      "else:",
+      "\t${5:pass}",
+      "finally:",
+      "\t${6:pass}"
+    ],
+    "description": "Code snippet for a try/except/else/finally statement"
+  }
+}

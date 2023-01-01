@@ -3,11 +3,11 @@ return {
     requires = {
         'hrsh7th/cmp-nvim-lsp',
         'hrsh7th/cmp-path',
-        'hrsh7th/cmp-buffer',
+        -- 'hrsh7th/cmp-buffer',
         'saadparwaiz1/cmp_luasnip',
         'L3MON4D3/LuaSnip',
         -- 'f3fora/cmp-spell'
-	'rafamadriz/friendly-snippets',
+	-- 'rafamadriz/friendly-snippets',
     },
     -- require("luasnip.loaders.from_vscode").lazy_load()
     config = function()
