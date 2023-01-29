@@ -1,5 +1,6 @@
 # Dotfiles
 
+<img src='./other/screenshot.png'/>
 
 ## Main Components
 
