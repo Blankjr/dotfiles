@@ -1,3 +1,7 @@
+# Outdated
+Switched to [Hyprland](https://github.com/Blankjr/hyrland-dots)  
+If you look for my old nixos config: [nixos](https://github.com/Blankjr/nixdots)
+
 # Dotfiles
 
 <img src='./other/screenshot.png'/>
